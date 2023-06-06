@@ -1,4 +1,9 @@
-export interface Model {
-  s: string, 
-  y: string
-}
+const tokens = {
+  light: {
+    'bg-default': 'white',
+    
+  },
+  dark: {},
+};
+
+export default tokens
