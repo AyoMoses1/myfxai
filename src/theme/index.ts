@@ -1,6 +1,7 @@
 import { extendTheme } from '@chakra-ui/react';
 import type { StyleFunctionProps } from '@chakra-ui/styled-system';
 import { ButtonStyle as Button } from './components/Button';
+import { ProgressStyle as Progress } from './components/Progress';
 import { HeadingStyle as Heading } from './components/Heading';
 import { InputStyle as Input } from './components/Input';
 import { formLabelStyle as FormLabel } from './components/FormLabel';
@@ -15,6 +16,7 @@ const theme = extendTheme({
     muted: '#64748b',
     blue1: '#003566',
     blue2: '#001D3D',
+    gray1: "#333333",
     gray3: '#BDBDBD',
     textDark: '#1C1C1C',
     textWhite: '#EFEFEF',
@@ -23,6 +25,7 @@ const theme = extendTheme({
     lighterBlue: ' #AED8FF',
     matteGreen: '#50B887',
     lightGreen: '#DAFFED',
+    darkGreen: '#65D19E',
     errorRed: '#E13131',
     mattePink: '#E0B7C7',
     deepMattePink: '#B4557A',
@@ -41,6 +44,7 @@ const theme = extendTheme({
     Text,
     Link,
     Heading,
+    Progress
   },
 
   textStyles: {

@@ -21,6 +21,12 @@ export const HeadingStyle = {
       fontWeight: '600',
     }),
 
+    cardHeader: (props: StyleFunctionProps) => ({
+      fontWeight: '700',
+      fontSize: '18px',
+      color: props.theme.colors.primary,
+
+    }),
     defaultProps: {
       size: 'md',
       variant: 'primary',

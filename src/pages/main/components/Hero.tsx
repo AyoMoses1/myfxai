@@ -37,7 +37,7 @@ function Hero() {
           </ButtonGroup>
         </GridItem>
         <GridItem>
-          <img src={myImage} alt="My Image" />
+          <img src={myImage} alt="Hero" />
         </GridItem>
       </Grid>
     </Box>

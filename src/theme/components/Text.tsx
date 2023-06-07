@@ -31,6 +31,11 @@ export const TextStyle = {
       color: '#475569',
       fontSize: "18px"
     }),
+    cardText: (props: StyleFunctionProps) => ({
+      fontWeight: '400',
+      color: props.theme.colors.gray1,
+      fontSize: "15px"
+    }),
 
     smallLight: {
       fontWeight: '300',
