@@ -1,6 +1,7 @@
 import { extendTheme } from '@chakra-ui/react';
 import type { StyleFunctionProps } from '@chakra-ui/styled-system';
 import { ButtonStyle as Button } from './components/Button';
+import { HeadingStyle as Heading } from './components/Heading';
 import { InputStyle as Input } from './components/Input';
 import { formLabelStyle as FormLabel } from './components/FormLabel';
 import { TextStyle as Text } from './components/Text';
@@ -27,7 +28,10 @@ const theme = extendTheme({
     deepMattePink: '#B4557A',
     lightYellow: '#FFFDF2',
     secondYellow: '#FFD60A',
-    
+  },
+
+  fonts: {
+    heading: 'Inter, sans-serif',
   },
 
   components: {
@@ -36,11 +40,13 @@ const theme = extendTheme({
     FormLabel,
     Text,
     Link,
+    Heading,
   },
 
   textStyles: {
     normal: {
       fontSize: { base: '16px', lg: '1.2vw' },
+      fontFamily: 'Plus Jakarta Sans, sans-serif',
     },
   },
 
@@ -58,7 +64,10 @@ const theme = extendTheme({
         color: props.theme.colors.gray[600],
         lineHeight: 'tall',
         backgroundColor: 'gray2',
-        fontFamily: `'Lato', sans-serif`,
+        fontFamily: 'Plus Jakarta Sans, sans-serif',
+      },
+      button: {
+        fontFamily: 'Inter, sans-serif',
       },
     }),
   },

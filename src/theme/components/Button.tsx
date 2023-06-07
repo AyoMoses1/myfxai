@@ -15,6 +15,7 @@ export const ButtonStyle = {
       bg: props.theme.colors.primary,
       color: '#fff',
       width: '127px',
+      fontWeight: '600',
       borderRadius: "5px",
       ':hover': {
         bg: props.theme.colors.secondary,
@@ -34,7 +35,7 @@ export const ButtonStyle = {
     }),
     secondary: (props: StyleFunctionProps) => ({
       bg: props.theme.colors.secondary,
-      color: '#fff',
+      color: props.theme.colors.primary,
       width: '127px',
       borderRadius: "5px",
       ':hover': {
@@ -54,7 +55,6 @@ export const ButtonStyle = {
       }
     }),
     noBg: (props: StyleFunctionProps) => ({
-      bg:'#EDF2F7',
       ':hover': {
         boxShadow: 'md',
       },

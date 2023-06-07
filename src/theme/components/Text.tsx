@@ -26,6 +26,11 @@ export const TextStyle = {
       textAlign: 'center',
       color: props.theme.colors.white,
     }),
+    heroText: (props: StyleFunctionProps) => ({
+      fontWeight: '400',
+      color: '#475569',
+      fontSize: "18px"
+    }),
 
     smallLight: {
       fontWeight: '300',
