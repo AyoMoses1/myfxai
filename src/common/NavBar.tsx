@@ -4,7 +4,7 @@ import { Flex, Box, Link, Text, Button } from '@chakra-ui/react';
 
 function NavBar() {
   return (
-    <Box px={8}>
+    <Box px={5}>
         <Flex p={4} align="center">
           <Box flex={2}>
             <Text>Logo</Text>

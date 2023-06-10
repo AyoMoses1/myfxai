@@ -18,7 +18,9 @@ export const HeadingStyle = {
       color: props.theme.colors.primary,
     }),
     secondary: (props: StyleFunctionProps) => ({
-      fontWeight: '600',
+      color: props.theme.colors.gray4,
+      fontWeight: '700',
+      fontSize: '41px'
     }),
 
     cardHeader: (props: StyleFunctionProps) => ({
