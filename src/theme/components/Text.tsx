@@ -18,7 +18,7 @@ export const TextStyle = {
       fontWeight: 'bold',
       fontSize: '1.15vw',
     }),
-    nav:  (props: StyleFunctionProps) => ({
+    nav: (props: StyleFunctionProps) => ({
       fontSize: { base: '16px', lg: '1.1vw' },
     }),
     whiteBoldNormal: (props: StyleFunctionProps) => ({
@@ -29,20 +29,25 @@ export const TextStyle = {
     heroText: (props: StyleFunctionProps) => ({
       fontWeight: '400',
       color: '#475569',
-      fontSize: "18px"
+      fontSize: '18px',
     }),
     cardText: (props: StyleFunctionProps) => ({
       fontWeight: '400',
       color: props.theme.colors.gray1,
-      fontSize: "15px"
+      fontSize: '15px',
     }),
-
+    reviewText: (props: StyleFunctionProps) => ({
+      fontWeight: '200',
+      fontSize: 24,
+      lineHeight: 7,
+      textAlign: 'center',
+      letterSpacing: '-0.02em',
+      color: '#454343',
+    }),
     smallLight: {
       fontWeight: '300',
-      fontSize: {base: '8px', lg: '1vw'},
-  },
-
-  
+      fontSize: { base: '8px', lg: '1vw' },
+    },
   },
   defaultProps: {},
 };

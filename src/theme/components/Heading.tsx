@@ -22,7 +22,11 @@ export const HeadingStyle = {
       fontWeight: '700',
       fontSize: '41px'
     }),
-
+    tertiary: (props: StyleFunctionProps) => ({
+      color: props.theme.colors.gray4,
+      fontWeight: '600',
+      fontSize: '36px'
+    }),
     cardHeader: (props: StyleFunctionProps) => ({
       fontWeight: '700',
       fontSize: '18px',
