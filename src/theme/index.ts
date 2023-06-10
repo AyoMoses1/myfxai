@@ -9,6 +9,13 @@ import { TextStyle as Text } from './components/Text';
 import { LinkStyle as Link } from './components/Link';
 
 const theme = extendTheme({
+  breakpoints: {
+    sm: '30em', // Small screens (up to 480px)
+    md: '48em', // Medium screens (up to 768px)
+    lg: '62em', // Large screens (up to 992px)
+    xl: '80em', // Extra-large screens (up to 1200px)
+  },
+  
   colors: {
     primary: '#000814',
     secondary: '#FFC300',
@@ -19,7 +26,7 @@ const theme = extendTheme({
     fadeBlue: '#F3F9FF',
     lightGrey: ' #F9F9F9',
     lightPink: '#FEF1FF',
-    gray1: "#333333",
+    gray1: '#333333',
     gray3: '#BDBDBD',
     gray4: '#18181B',
     textDark: '#1C1C1C',
@@ -35,6 +42,7 @@ const theme = extendTheme({
     deepMattePink: '#B4557A',
     lightYellow: '#FFFDF2',
     secondYellow: '#FFD60A',
+    purple: '#7F56D9',
   },
 
   fonts: {
@@ -48,7 +56,7 @@ const theme = extendTheme({
     Text,
     Link,
     Heading,
-    Progress
+    Progress,
   },
 
   textStyles: {

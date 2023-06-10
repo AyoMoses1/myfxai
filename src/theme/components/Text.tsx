@@ -44,6 +44,18 @@ export const TextStyle = {
       letterSpacing: '-0.02em',
       color: '#454343',
     }),
+    faqQuestion:(props: StyleFunctionProps) => ({
+      fontWeight: 600,
+      fontSize: '18px',
+      lineHeight: '28px',
+      color: '#101828',
+    }),
+    faqAnswer:(props: StyleFunctionProps) => ({
+      fontWeight: 400,
+      fontSize: '16px',
+      lineHeight: '24px',
+      color: '#667085',
+    }),
     smallLight: {
       fontWeight: '300',
       fontSize: { base: '8px', lg: '1vw' },

@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import { Container } from '@chakra-ui/react';
 import Features from './components/Features';
 import Reviews from './components/Reviews';
+import FAQSection from './components/Faq';
 
 function index() {
   return (
@@ -13,6 +14,7 @@ function index() {
         <Carousel />
         <Features/>
         <Reviews />
+        <FAQSection/>
       </Container>
     </>
   );
