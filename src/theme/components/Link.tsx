@@ -8,7 +8,7 @@ export const LinkStyle = {
   sizes: {
     sm: {
       fontSize: "16px"
-    }
+    },
   },
   variants: {
     normal: (props: StyleFunctionProps) => ({
@@ -23,6 +23,19 @@ export const LinkStyle = {
           textDecoration:'none',
         }
     }),
+    footerLink: (props: StyleFunctionProps) => ({
+      fontWeight: 'normal',
+      color: props.theme.colors.link,
+      fontSize: '14px',
+      '_activeLink': {
+          color: props.theme.colors.primary,
+          fontWeight: 'bold',
+      },
+      '_hover': {
+        color: props.theme.colors.primary,
+        textDecoration:'none',
+      }
+  }),
   
   },
   defaultProps: {

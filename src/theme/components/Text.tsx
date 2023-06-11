@@ -44,6 +44,12 @@ export const TextStyle = {
       letterSpacing: '-0.02em',
       color: '#454343',
     }),
+    footerText: (props: StyleFunctionProps) => ({
+      fontWeight: '400',
+      fontSize: 14,
+      lineHeight: 5,
+      color: props.theme.colors.gray1,
+    }),
     faqQuestion:(props: StyleFunctionProps) => ({
       fontWeight: 600,
       fontSize: '18px',
