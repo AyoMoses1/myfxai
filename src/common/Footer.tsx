@@ -25,7 +25,7 @@ function Footer() {
             {jumbotronData.content}
           </Text>
         </Jumbotron>
-        <Grid templateColumns="repeat(4, 1fr)" gap={6}>
+        <Grid templateColumns="repeat(4, 1fr)" gap={12}>
           {footerInfo.map((item, idx) => {
             return idx === 0 ? (
               <GridItem>
