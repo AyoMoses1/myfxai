@@ -8,7 +8,9 @@ import {
   Link,
   List,
   HStack,
-  IconButton
+  IconButton,
+  Divider,
+  Center,
 } from '@chakra-ui/react';
 import styled from 'styled-components';
 import { footerInfo, jumbotronData } from './helpers';
@@ -65,6 +67,12 @@ function Footer() {
             );
           })}
         </Grid>
+        <Divider orientation="horizontal" bg="lightBlue" height="1px" mb={6}/>
+        <Center>
+          <Text variant="footerText">
+            © Copyright 2023, All Rights Reserved by myFXai.com
+          </Text>
+        </Center>
       </Box>
     </Box>
   );
