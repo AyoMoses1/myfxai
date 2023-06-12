@@ -15,9 +15,12 @@ const theme = extendTheme({
     lg: '62em', // Large screens (up to 992px)
     xl: '80em', // Extra-large screens (up to 1200px)
   },
-  
+
   colors: {
-    primary: '#000814',
+    primary: {
+      light: '#000814',
+      dark: '#B6C2CF',
+    },
     secondary: '#FFC300',
     link: '#333333',
     muted: '#64748b',

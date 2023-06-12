@@ -61,10 +61,9 @@ export const ButtonStyle = {
     }),
     outline: (props: StyleFunctionProps) => {
       return {
-      bg:  '#fff',
-      border: `1px solid ${props.theme.colors.primary}`,
+      border: `1px solid ${ props.theme.colors.primary[props.colorMode === 'dark' ? 'dark': 'light']}`,
       outline: 'red',
-      color: props.theme.colors.primary,
+      color:  props.theme.colors.primary[props.colorMode === 'dark' ? 'dark': 'light'],
       borderRadius: "5px",
       width: '127px',
       ':hover': {

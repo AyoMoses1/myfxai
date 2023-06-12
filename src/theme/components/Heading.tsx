@@ -1,4 +1,4 @@
-import { StyleFunctionProps } from '@chakra-ui/styled-system';
+import { StyleFunctionProps, useColorModeValue } from '@chakra-ui/react';
 
 export const HeadingStyle = {
   baseStyle: () => ({
@@ -15,7 +15,7 @@ export const HeadingStyle = {
   },
   variants: {
     primary: (props: StyleFunctionProps) => ({
-      color: props.theme.colors.primary,
+      color: props.theme.colors.primary[props.colorMode === 'dark' ? 'dark' : 'light']
     }),
     secondary: (props: StyleFunctionProps) => ({
       color: props.theme.colors.gray4,

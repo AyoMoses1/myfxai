@@ -28,7 +28,10 @@ export const TextStyle = {
     }),
     heroText: (props: StyleFunctionProps) => ({
       fontWeight: '400',
-      color: '#475569',
+      color:
+        props.colorMode === 'dark'
+          ? props.theme.colors.primary['dark']
+          : '#475569',
       fontSize: '18px',
     }),
     cardText: (props: StyleFunctionProps) => ({
@@ -50,13 +53,13 @@ export const TextStyle = {
       lineHeight: 5,
       color: props.theme.colors.gray1,
     }),
-    faqQuestion:(props: StyleFunctionProps) => ({
+    faqQuestion: (props: StyleFunctionProps) => ({
       fontWeight: 600,
       fontSize: '18px',
       lineHeight: '28px',
       color: '#101828',
     }),
-    faqAnswer:(props: StyleFunctionProps) => ({
+    faqAnswer: (props: StyleFunctionProps) => ({
       fontWeight: 400,
       fontSize: '16px',
       lineHeight: '24px',

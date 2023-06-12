@@ -13,7 +13,9 @@ export const LinkStyle = {
   variants: {
     normal: (props: StyleFunctionProps) => ({
         fontWeight: 'normal',
-        color: props.theme.colors.link,
+        color: props.colorMode === 'dark'
+        ? props.theme.colors.primary['dark']
+        : props.theme.colors.link,
         '_activeLink': {
             color: props.theme.colors.primary,
             fontWeight: 'bold',
