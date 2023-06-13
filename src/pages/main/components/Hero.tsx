@@ -9,7 +9,6 @@ import {
   Text,
   Icon,
   useColorMode,
-  useColorModeValue,
 } from '@chakra-ui/react';
 import { ArrowForwardIcon } from '@chakra-ui/icons';
 import { FaPlay } from 'react-icons/fa';

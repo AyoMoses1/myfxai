@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box, Text, Flex } from '@chakra-ui/react';
 import styled from 'styled-components';
+import { useColorMode } from '@chakra-ui/react';
 
 interface CustomCardProps {
   title: string;
@@ -10,8 +11,9 @@ interface CustomCardProps {
 }
 
 const ReviewCard = ({ title, comment, avatar, name }: CustomCardProps) => {
+  const { colorMode } = useColorMode();
   return (
-    <StyledBox bg="lightGrey">
+    <StyledBox bg={`bgGrey.${colorMode === 'dark' ? 'dark' : 'light'}`}>
       <Text variant="reviewText">{comment}</Text>
       <Flex justifyContent="center" my={6}>
         <img src={avatar} alt={name} />

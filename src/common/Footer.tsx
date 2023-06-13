@@ -11,13 +11,19 @@ import {
   IconButton,
   Divider,
   Center,
+  useColorMode,
 } from '@chakra-ui/react';
 import styled from 'styled-components';
 import { footerInfo, jumbotronData } from './helpers';
 
 function Footer() {
+  const { colorMode } = useColorMode();
+  const bgColor = colorMode === 'dark' ? 'primary.light' : 'lightBlue';
+  const linkColor = colorMode === 'dark' ? 'textWhite' : 'primary.light';
+  const textColor = colorMode === 'dark' ? 'textWhite' : 'primary.light';
+
   return (
-    <Box bg="lighterBlue" color="white" py={10}>
+    <Box bg={bgColor} color="white" py={10}>
       <Box maxW="90%" mx="auto" px={6}>
         <Jumbotron mb="112px" py={10} px={20}>
           <Heading textAlign="center" fontSize={20} mb={2}>
@@ -31,7 +37,7 @@ function Footer() {
           {footerInfo.map((item, idx) => {
             return idx === 0 ? (
               <GridItem>
-                <FooterListHeader mb={10} color="primary" fontSize={13}>
+                <FooterListHeader mb={10} color={linkColor} fontSize={13}>
                   {item.title}
                 </FooterListHeader>
                 <Text variant="footerText">{item.content}</Text>
@@ -53,7 +59,7 @@ function Footer() {
               </GridItem>
             ) : (
               <GridItem>
-                <FooterListHeader mb={10} color="primary" fontSize={13}>
+                <FooterListHeader mb={10} color={linkColor} fontSize={13}>
                   {item.title}
                 </FooterListHeader>
                 <List>
@@ -67,7 +73,7 @@ function Footer() {
             );
           })}
         </Grid>
-        <Divider orientation="horizontal" bg="lightBlue" height="1px" mb={6}/>
+        <Divider orientation="horizontal" bg="lightBlue" height="1px" mb={6} />
         <Center>
           <Text variant="footerText">
             © Copyright 2023, All Rights Reserved by myFXai.com

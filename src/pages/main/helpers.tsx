@@ -77,7 +77,7 @@ export const featuredCardsInfo = [
     content:
       "Trade smarter with MyFXai.com's advanced AI technology. Our platform uses cutting-edge algorithms to help you make more profitable trades.",
     image: trading,
-    bgColor: 'fadeBlue',
+    bgColor: 'mainBlue',
     float: false,
   },
   {
@@ -85,7 +85,7 @@ export const featuredCardsInfo = [
     content:
       'Connect directly to your preferred stock broker and start trading in seconds. MyFXai.com makes it easy to integrate your account and start trading.',
     image: [man, broker],
-    bgColor: 'lightYellow',
+    bgColor: 'mainYellow',
     float: true,
   },
   {
@@ -93,7 +93,7 @@ export const featuredCardsInfo = [
     content:
       'Stay up-to-date with the latest market trends and insights. MyFXai.com provides real-time data and analytics to help you make informed trading decisions.',
     image: [data1, data2, data3, data4],
-    bgColor: 'lightPink',
+    bgColor: 'mainPink',
     float: false,
   },
   {
@@ -101,7 +101,7 @@ export const featuredCardsInfo = [
     content:
       'Trade with confidence knowing that your information is secure. MyFXai.com uses advanced security features to protect your data and keep your account safe',
     image: security,
-    bgColor: 'lightgrey',
+    bgColor: 'mainGrey',
     float: true,
   },
   {
@@ -109,7 +109,7 @@ export const featuredCardsInfo = [
     content:
       'Stay up-to-date with the latest market trends and insights. MyFXai.com provides real-time data and analytics to help you make informed trading decisions.',
     image: support,
-    bgColor: 'lightGreen',
+    bgColor: 'mainGreen',
     float: false,
   },
 ];

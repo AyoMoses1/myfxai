@@ -27,7 +27,9 @@ export const LinkStyle = {
     }),
     footerLink: (props: StyleFunctionProps) => ({
       fontWeight: 'normal',
-      color: props.theme.colors.link,
+      color: props.colorMode === 'dark'
+      ? props.theme.colors.textWhite
+      : props.theme.colors.link,
       fontSize: '14px',
       '_activeLink': {
           color: props.theme.colors.primary,

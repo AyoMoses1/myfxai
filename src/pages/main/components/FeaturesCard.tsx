@@ -1,5 +1,13 @@
 import React from 'react';
-import { Box, Heading, Text, Image, Grid, GridItem } from '@chakra-ui/react';
+import {
+  Box,
+  Heading,
+  Text,
+  Image,
+  Grid,
+  GridItem,
+  useColorMode,
+} from '@chakra-ui/react';
 import styled from 'styled-components';
 
 interface CustomCardProps {
@@ -12,12 +20,12 @@ interface CustomCardProps {
 }
 
 const styleEven = {
-  display:"flex",
-  textAlign: "right",
-  justifyContent:"flex-end",
-  maxWidth:"70%",
-  marginLeft: "auto"
-}
+  display: 'flex',
+  textAlign: 'right',
+  justifyContent: 'flex-end',
+  maxWidth: '70%',
+  marginLeft: 'auto',
+};
 
 const FeatureCard = ({
   title,
@@ -27,19 +35,18 @@ const FeatureCard = ({
   float,
   even,
 }: CustomCardProps) => {
+  const { colorMode } = useColorMode();
+
   return (
     <StyledBox
-      bg={bgColor}
+      bg={colorMode === 'dark' ? `${bgColor}.dark` : `${bgColor}.light`}
+      variant="feature"
       p={12}
       marginBottom={10}
       maxWidth="60%"
       marginLeft={float ? 'auto' : ''}
     >
-      <Heading
-        variant="secondary"
-        marginBottom={4}
-        sx={even ? {} : styleEven}
-      >
+      <Heading variant="secondary" marginBottom={4} sx={even ? {} : styleEven}>
         {title}
       </Heading>
       <Grid templateColumns="repeat(3, 1fr)" gap={4}>

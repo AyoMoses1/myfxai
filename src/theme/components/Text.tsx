@@ -36,7 +36,10 @@ export const TextStyle = {
     }),
     cardText: (props: StyleFunctionProps) => ({
       fontWeight: '400',
-      color: props.theme.colors.gray1,
+      color:
+        props.colorMode === 'dark'
+          ? props.theme.colors.primary['dark']
+          : props.theme.colors.gray1,
       fontSize: '15px',
     }),
     reviewText: (props: StyleFunctionProps) => ({
@@ -45,19 +48,27 @@ export const TextStyle = {
       lineHeight: 7,
       textAlign: 'center',
       letterSpacing: '-0.02em',
-      color: '#454343',
+      color:
+        props.colorMode === 'dark'
+          ? props.theme.colors.primary['dark']
+          : '#454343',
     }),
     footerText: (props: StyleFunctionProps) => ({
       fontWeight: '400',
       fontSize: 14,
       lineHeight: 5,
-      color: props.theme.colors.gray1,
+      color: props.colorMode === 'dark'
+      ? props.theme.colors.textWhite
+      : props.theme.colors.grey1,
     }),
     faqQuestion: (props: StyleFunctionProps) => ({
       fontWeight: 600,
       fontSize: '18px',
       lineHeight: '28px',
-      color: '#101828',
+      color:
+        props.colorMode === 'dark'
+          ? props.theme.colors.primary['dark']
+          : '#101828',
     }),
     faqAnswer: (props: StyleFunctionProps) => ({
       fontWeight: 400,
