@@ -20,7 +20,6 @@ function Footer() {
   const { colorMode } = useColorMode();
   const bgColor = colorMode === 'dark' ? 'primary.light' : 'lighterBlue';
   const linkColor = colorMode === 'dark' ? 'textWhite' : 'primary.light';
-  const textColor = colorMode === 'dark' ? 'textWhite' : 'primary.light';
 
   return (
     <Box bg={bgColor} color="white" py={10}>
