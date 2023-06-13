@@ -59,7 +59,7 @@ export const TextStyle = {
       lineHeight: 5,
       color: props.colorMode === 'dark'
       ? props.theme.colors.textWhite
-      : props.theme.colors.grey1,
+      : props.theme.colors.gray1,
     }),
     faqQuestion: (props: StyleFunctionProps) => ({
       fontWeight: 600,
