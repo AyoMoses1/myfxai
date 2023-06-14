@@ -10,13 +10,12 @@ import paths from 'common/paths';
 function App() {
   return (
     <ChakraProvider theme={theme}>
-      <Layout>
         <Routes>
-          <Route path={paths.home} element={<Home />}>
-            <Route index path={paths.terms} element={<Terms />} />
+          <Route path={paths.home} element={<Layout />}>
+          <Route path={paths.home} element={<Home />} />
+            <Route path={paths.terms} element={<Terms />} />
           </Route>
         </Routes>
-      </Layout>
     </ChakraProvider>
   );
 }

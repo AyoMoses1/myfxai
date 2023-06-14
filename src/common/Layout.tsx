@@ -1,18 +1,15 @@
 import React, { ReactNode } from 'react';
 import Footer from './Footer';
 import NavBar from './NavBar';
-import { ColorModeProvider } from "@chakra-ui/react";
+import { ColorModeProvider } from '@chakra-ui/react';
+import { Outlet } from 'react-router-dom';
 
-interface LayoutProps {
-  children: ReactNode;
-}
-
-const Layout: React.FC<LayoutProps> = ({ children }) => {
+const Layout = () => {
   return (
     <>
       <ColorModeProvider>
         <NavBar />
-        <div>{children}</div>
+        <Outlet />
         <Footer />
       </ColorModeProvider>
     </>
