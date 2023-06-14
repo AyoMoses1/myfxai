@@ -17,21 +17,17 @@ function index() {
       <Center>
         <VStack align="center" spacing={4}>
           <Heading variant="secondary" m={6}>
-            Terms
+            {termsData.main.title}
           </Heading>
           <Image src={divider} alt="Header Decorator" />
           <Text variant="headerCaption" textAlign="center" marginBottom={10}>
-            At myFXai.com, we value the privacy and security of our users'
-            personal information. This privacy protection policy describes how
-            we collect, use, and protect your personal information when you use
-            our mentorship services. By using our website, you agree to the
-            terms of this policy
+            {termsData.main.caption}
           </Text>
         </VStack>
       </Center>
       <VStack align="start" spacing={4} py={20}>
-        {termsData.map((item) => (
-          <Box>
+        {termsData.sub.map((item,idx) => (
+          <Box key={idx}>
             <Heading variant="quaternary" marginBottom={4}>
               {item.title}
             </Heading>

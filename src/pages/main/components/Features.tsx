@@ -1,26 +1,22 @@
-import React from 'react'
-import { featuredCardsInfo } from '../helpers'
-import FeatureCard from './FeaturesCard'
+import React from 'react';
+import { featuredCardsInfo } from '../helpers';
+import FeatureCard from './FeaturesCard';
 
 const Features = () => {
-
-  const featureElements= featuredCardsInfo.map((info, idx) => {
+  const featureElements = featuredCardsInfo.map((info, idx) => {
     return (
-      <FeatureCard 
+      <FeatureCard
+        key={idx}
         title={info.title}
         content={info.content}
         image={info.image}
         bgColor={info.bgColor}
         float={info.float}
-        even = {idx % 2 === 0 ? true : false }
+        even={idx % 2 === 0 ? true : false}
       />
-    )
-  })
-  return (
-    <>
-      {featureElements}
-    </>
-  )
-}
+    );
+  });
+  return <>{featureElements}</>;
+};
 
-export default Features
+export default Features;

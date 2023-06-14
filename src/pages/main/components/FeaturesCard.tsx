@@ -58,9 +58,9 @@ const FeatureCard = ({
             <Image src={image} />
           ) : (
             <Grid templateColumns="repeat(2, 1fr)" gap={2}>
-              {image.map((item) => {
+              {image.map((item, idx) => {
                 return (
-                  <GridItem>
+                  <GridItem key={idx}>
                     <Image src={item} />
                   </GridItem>
                 );

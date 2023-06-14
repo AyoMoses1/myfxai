@@ -6,7 +6,7 @@ import ReviewCard from './ReviewCard';
 const Reviews = () => {
   const reviewElements = reviewCardsInfo.map((info, idx) => {
     return (
-      <GridItem>
+      <GridItem key={idx}>
         <ReviewCard
           title={info.title}
           comment={info.comment}

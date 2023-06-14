@@ -1,5 +1,9 @@
-export const termsData = [
-  {
+export const termsData = {
+  main: {
+    title: "Terms",
+    caption: "At myFXai.com, we value the privacy and security of our users' personal information. This privacy protection policy describes how we collect, use, and protect your personal information when you use our mentorship services. By using our website, you agree to the terms of this policy"
+  },
+  sub:[ {
     title: 'Information',
     content:
       'We Collect We collect personal information such as your name, email address, and phone number when you sign up for our mentorship services. We may also collect information about your skills, experience, and educational background to match you with a suitable mentor. We may use cookies to collect information about your use of our website and improve your experience.',
@@ -34,4 +38,5 @@ export const termsData = [
     content:
       ' If you have any questions or concerns about this privacy protection policy, please contact us at [contact information].',
   },
-];
+]
+}

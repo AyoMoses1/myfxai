@@ -4,9 +4,9 @@ import { cardsInfo } from '../helpers';
 import Card from './Card';
 
 const Carousel = () => {
-  const cardElements = cardsInfo.map((info) => {
+  const cardElements = cardsInfo.map((info, idx) => {
     return (
-      <GridItem marginBottom="200px">
+      <GridItem marginBottom="200px" key={idx}>
         <Card
           title={info.title}
           allias={info.allias}

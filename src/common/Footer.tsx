@@ -35,14 +35,14 @@ function Footer() {
         <Grid templateColumns="repeat(4, 1fr)" gap={12}>
           {footerInfo.map((item, idx) => {
             return idx === 0 ? (
-              <GridItem>
+              <GridItem key={idx}>
                 <FooterListHeader mb={10} color={linkColor} fontSize={13}>
                   {item.title}
                 </FooterListHeader>
                 <Text variant="footerText">{item.content}</Text>
                 <HStack spacing={4} my={10}>
-                  {item.icons?.map((icon) => (
-                    <Link href="https://twitter.com">
+                  {item.icons?.map((icon, idx) => (
+                    <Link href="https://twitter.com" key={idx}>
                       <IconButton
                         aria-label="Facebook"
                         icon={icon}
@@ -57,13 +57,13 @@ function Footer() {
                 </HStack>
               </GridItem>
             ) : (
-              <GridItem>
+              <GridItem key={idx}>
                 <FooterListHeader mb={10} color={linkColor} fontSize={13}>
                   {item.title}
                 </FooterListHeader>
                 <List>
-                  {item.menu?.map((menuItem) => (
-                    <ListItem mb={4}>
+                  {item.menu?.map((menuItem, idx) => (
+                    <ListItem mb={4} key={idx}>
                       <Link variant="footerLink">{menuItem.name}</Link>
                     </ListItem>
                   ))}
