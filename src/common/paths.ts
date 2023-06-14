@@ -11,6 +11,7 @@ const paths = {
   login: '/login',
   terms: '/terms',
   policies: '/policies',
+  contact: '/contact',
   agents: '/agents',
   bdaOrders: '/bdaOrders',
   profile: '/profile',

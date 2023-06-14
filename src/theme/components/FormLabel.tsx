@@ -2,10 +2,10 @@ import { StyleFunctionProps } from '@chakra-ui/styled-system';
 
 export const formLabelStyle = {
   baseStyle: (props: StyleFunctionProps) => ({
-    fontSize: { base: '14px', lg: '1.1vw' },
+    fontSize: { base: '14px', lg: '16px' },
     fontWeight: 'bold',
     textTransform: 'capitalize',
-    color:  props.theme.colors.muted,
+    color:  "#344054",
   }),
 
   defaultProps: {

@@ -13,7 +13,7 @@ function NavBar() {
           <Link mx={4} as={ReactRouterLink} to ="/">Home</Link>
           <Link mx={4}>About</Link>
           <Link mx={4}>Blog</Link>
-          <Link mx={4}>Contact</Link>
+          <Link mx={4}  as={ReactRouterLink} to ="/contact">Contact</Link>
           <Link mx={4}>FAQ</Link>
           <Link mx={4} as={ReactRouterLink} to ="/terms">Terms</Link>
           <Link mx={4}  as={ReactRouterLink} to ="/policies">Privacy</Link>
