@@ -5,7 +5,7 @@ import Form from './components/Form';
 
 function index() {
   return (
-    <Container maxW="90%">
+    <Container maxW="90%" py={4}>
       <Grid templateColumns="repeat(4, 1fr)">
         <GridItem colSpan={2}>
           <Banner />

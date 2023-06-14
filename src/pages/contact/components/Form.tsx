@@ -12,13 +12,14 @@ import {
   Stack,
   Link,
   Checkbox,
+  Textarea,
 } from '@chakra-ui/react';
 import { Link as ReactRouterLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 function Form() {
   return (
-    <Container height="100%" px={20}>
+    <StyledContainer>
       <Flex h="100%" align="center" justify="center">
         <Box>
           <Heading variant="secondary" color="light.blue1" marginBottom={4}>
@@ -39,7 +40,7 @@ function Form() {
               </FormControl>
               <FormControl id="message">
                 <FormLabel>Message</FormLabel>
-                <Input type="textarea" variant="outline" />
+                <Textarea size="md" />
               </FormControl>
               <FormControl justifyContent="space-between">
                 <Checkbox defaultChecked={false}>
@@ -51,7 +52,12 @@ function Form() {
                 </Checkbox>
               </FormControl>
               <Link as={ReactRouterLink} to="/">
-                <Button type="submit" variant="secondary" size="lg" width="100%">
+                <Button
+                  type="submit"
+                  variant="secondary"
+                  size="lg"
+                  width="100%"
+                >
                   Send Message
                 </Button>
               </Link>
@@ -59,7 +65,7 @@ function Form() {
           </StyledForm>
         </Box>
       </Flex>
-    </Container>
+    </StyledContainer>
   );
 }
 
@@ -67,4 +73,11 @@ export default Form;
 
 const StyledForm = styled('form')`
   margin-top: 42px;
+`;
+
+const StyledContainer = styled(Container)`
+  height: 100%;
+  padding-x: 20px;
+  padding-bottom: 80px;
+  padding-top: 20px;
 `;
