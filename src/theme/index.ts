@@ -45,6 +45,7 @@ const theme = extendTheme({
     gray1: '#333333',
     gray3: '#BDBDBD',
     gray4: '#18181B',
+    heroText: "#383737",
     textDark: '#1C1C1C',
     textWhite: '#EFEFEF',
     background: '#141414',
@@ -57,6 +58,7 @@ const theme = extendTheme({
     },
     darkGreen: '#65D19E',
     errorRed: '#E13131',
+    
     mattePink: '#E0B7C7',
     deepMattePink: '#B4557A',
     mainYellow: {

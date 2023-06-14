@@ -34,6 +34,14 @@ export const TextStyle = {
           : '#475569',
       fontSize: '18px',
     }),
+    quaternary: (props: StyleFunctionProps) => ({
+      color:
+        props.colorMode === 'dark'
+          ? props.theme.colors.primary['dark']
+          : props.theme.colors.heroText,
+      fontWeight: '400',
+      fontSize: '18px',
+    }),
     cardText: (props: StyleFunctionProps) => ({
       fontWeight: '400',
       color:
@@ -57,9 +65,19 @@ export const TextStyle = {
       fontWeight: '400',
       fontSize: 14,
       lineHeight: 5,
-      color: props.colorMode === 'dark'
-      ? props.theme.colors.textWhite
-      : props.theme.colors.gray1,
+      color:
+        props.colorMode === 'dark'
+          ? props.theme.colors.textWhite
+          : props.theme.colors.gray1,
+    }),
+    headerCaption: (props: StyleFunctionProps) => ({
+      fontWeight: '500',
+      fontSize: 18,
+      lineHeight: 6,
+      color:
+        props.colorMode === 'dark'
+          ? props.theme.colors.textWhite
+          : props.theme.colors.gray1,
     }),
     faqQuestion: (props: StyleFunctionProps) => ({
       fontWeight: 600,
