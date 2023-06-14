@@ -4,6 +4,7 @@ import theme from './theme';
 import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import Home from './pages/main';
 import Terms from './pages/terms'
+import Policies from './pages/policies'
 import Layout from './common/Layout';
 import paths from 'common/paths';
 
@@ -14,6 +15,7 @@ function App() {
           <Route path={paths.home} element={<Layout />}>
           <Route path={paths.home} element={<Home />} />
             <Route path={paths.terms} element={<Terms />} />
+            <Route path={paths.policies} element={<Policies />} />
           </Route>
         </Routes>
     </ChakraProvider>

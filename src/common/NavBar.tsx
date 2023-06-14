@@ -16,7 +16,7 @@ function NavBar() {
           <Link mx={4}>Contact</Link>
           <Link mx={4}>FAQ</Link>
           <Link mx={4} as={ReactRouterLink} to ="/terms">Terms</Link>
-          <Link mx={4}>Privacy</Link>
+          <Link mx={4}  as={ReactRouterLink} to ="/policies">Privacy</Link>
         </Box>
         <Box flex={1}>
           <Button variant="outline">Log In</Button>

@@ -10,6 +10,7 @@ const paths = {
   about: '/about',
   login: '/login',
   terms: '/terms',
+  policies: '/policies',
   agents: '/agents',
   bdaOrders: '/bdaOrders',
   profile: '/profile',
