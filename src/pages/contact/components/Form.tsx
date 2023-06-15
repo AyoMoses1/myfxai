@@ -20,7 +20,7 @@ import styled from 'styled-components';
 function Form() {
   return (
     <StyledContainer>
-      <Flex h="100%" align="center" justify="center">
+      <Flex h="100%" align="center">
         <Box>
           <Heading variant="secondary" color="light.blue1" marginBottom={4}>
             Get in touch
