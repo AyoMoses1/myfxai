@@ -79,6 +79,7 @@ export const featuredCardsInfo = [
     image: trading,
     bgColor: 'mainBlue',
     float: false,
+    border: "#2A71B4"
   },
   {
     title: 'Seamless Integration with Your Broker',
@@ -87,6 +88,7 @@ export const featuredCardsInfo = [
     image: [man, broker],
     bgColor: 'mainYellow',
     float: true,
+    border: "#C89A07"
   },
   {
     title: 'Real-Time Market Data',
@@ -95,6 +97,7 @@ export const featuredCardsInfo = [
     image: [data1, data2, data3, data4],
     bgColor: 'mainPink',
     float: false,
+    border: "#882B4F"
   },
   {
     title: 'Advanced Security Features',
@@ -103,6 +106,7 @@ export const featuredCardsInfo = [
     image: security,
     bgColor: 'mainGrey',
     float: true,
+    border: "#000000"
   },
   {
     title: 'Customer Support',
@@ -111,6 +115,7 @@ export const featuredCardsInfo = [
     image: support,
     bgColor: 'mainGreen',
     float: false,
+    border: "#1D6644"
   },
 ];
 

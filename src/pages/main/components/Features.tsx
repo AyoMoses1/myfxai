@@ -11,6 +11,7 @@ const Features = () => {
         content={info.content}
         image={info.image}
         bgColor={info.bgColor}
+        border={info.border}
         float={info.float}
         even={idx % 2 === 0 ? true : false}
       />

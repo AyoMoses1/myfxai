@@ -17,6 +17,7 @@ interface CustomCardProps {
   bgColor: string;
   float: boolean;
   even: boolean;
+  border: string;
 }
 
 const styleEven = {
@@ -34,13 +35,18 @@ const FeatureCard = ({
   bgColor,
   float,
   even,
+  border,
 }: CustomCardProps) => {
   const { colorMode } = useColorMode();
+
 
   return (
     <StyledBox
       bg={colorMode === 'dark' ? `${bgColor}.dark` : `${bgColor}.light`}
+      color={border}
+      borderRight={float}
       variant="feature"
+      isFloat={float}
       p={12}
       marginBottom={10}
       maxWidth="60%"
@@ -75,6 +81,19 @@ const FeatureCard = ({
 
 export default FeatureCard;
 
-const StyledBox = styled(Box)`
-  box-shadow: ${(props) => props.bgColor} 1.45px 1.45px 1.4px;
+
+ const StyledBox = styled(Box)`
+  border-radius: 6.81px;
+  background-color: #fffdf2;
+  border: 1.49px solid;
+  border-image: linear-gradient(
+    ${(props) => props.borderRight ? "to left": "to right"},
+    ${(props) => props.color} 28.27%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  border-image-slice: 1;
+  border-image-width: 1px;
+  border-image-outset: 0;
+  border-image-repeat: stretch;
 `;
+
