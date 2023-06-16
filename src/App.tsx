@@ -1,7 +1,7 @@
 import React from 'react';
 import { ChakraProvider } from '@chakra-ui/react';
 import theme from './theme';
-import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Home from './pages/main';
 import Terms from './pages/terms'
 import Policies from './pages/policies'
