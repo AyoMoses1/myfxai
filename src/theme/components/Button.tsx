@@ -12,7 +12,7 @@ export const ButtonStyle = {
   },
   variants: {
     primary: (props: StyleFunctionProps) => ({
-      bg: props.theme.colors.primary,
+      bg: props.theme.colors.primary.light,
       color: '#fff',
       width: '127px',
       fontWeight: '600',
@@ -82,7 +82,7 @@ export const ButtonStyle = {
         width: '50%'
       }),
     full: (props: StyleFunctionProps) => ({
-        bg: props.theme.colors.primary,
+        bg: props.theme.colors.primary.light,
         color: '#fff',
         ':hover': {
           bg: props.theme.colors.secondary,

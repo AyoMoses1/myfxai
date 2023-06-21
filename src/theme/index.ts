@@ -21,6 +21,8 @@ const theme = extendTheme({
       light: '#000814',
       dark: '#B6C2CF',
     },
+    authBg: '#0F172A',
+    authText: "#CBD5E1",
     secondary: '#FFC300',
     link: '#333333',
     muted: '#64748b',
@@ -39,13 +41,13 @@ const theme = extendTheme({
       dark: '#2A242B;',
     },
     bgGrey: {
-      light: "#F8F8F8",
-      dark: "#161A1D"
+      light: '#F8F8F8',
+      dark: '#161A1D',
     },
     gray1: '#333333',
     gray3: '#BDBDBD',
     gray4: '#18181B',
-    heroText: "#383737",
+    heroText: '#383737',
     textDark: '#1C1C1C',
     textWhite: '#EFEFEF',
     background: '#141414',
@@ -54,11 +56,11 @@ const theme = extendTheme({
     matteGreen: '#50B887',
     mainGreen: {
       light: '#F2FFF1',
-      dark :'#212E27'
+      dark: '#212E27',
     },
     darkGreen: '#65D19E',
     errorRed: '#E13131',
-    
+
     mattePink: '#E0B7C7',
     deepMattePink: '#B4557A',
     mainYellow: {
@@ -87,6 +89,10 @@ const theme = extendTheme({
     normal: {
       fontSize: { base: '16px', lg: '1.2vw' },
       fontFamily: 'Plus Jakarta Sans, sans-serif',
+    },
+    auth: {
+      fontSize: { base: '18px', lg: '1.2vw' },
+      fontFamily:'Poppins, sans-serif',
     },
   },
 

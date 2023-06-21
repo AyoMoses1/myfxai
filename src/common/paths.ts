@@ -9,6 +9,7 @@ const paths = {
   home: '/',
   about: '/about',
   login: '/login',
+  signup: '/signup',
   terms: '/terms',
   policies: '/policies',
   contact: '/contact',

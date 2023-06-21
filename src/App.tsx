@@ -8,17 +8,20 @@ import Policies from './pages/policies'
 import Contact from './pages/contact'
 import Layout from './common/Layout';
 import paths from 'common/paths';
+import SignIn from './pages/auth/SignIn';
+import SignUp from 'pages/auth/SignUp';
 
 function App() {
   return (
     <ChakraProvider theme={theme}>
         <Routes>
+        <Route path={paths.signup} element={<SignUp />} />
+        <Route path={paths.login} element={<SignIn />} />
           <Route path={paths.home} element={<Layout />}>
           <Route path={paths.home} element={<Home />} />
             <Route path={paths.terms} element={<Terms />} />
             <Route path={paths.policies} element={<Policies />} />
-            <Route path={paths.contact} element={<Contact />} />
-          </Route>
+            <Route path={paths.contact} element={<Contact />} />          </Route>
         </Routes>
     </ChakraProvider>
   );

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Flex, Box, Link, Text, Button } from '@chakra-ui/react';
-import { Link as ReactRouterLink } from "react-router-dom";
+import { Link as ReactRouterLink } from 'react-router-dom';
 
 function NavBar() {
   return (
@@ -10,16 +10,26 @@ function NavBar() {
           <Text>Logo</Text>
         </Box>
         <Box flex={2}>
-          <Link mx={4} as={ReactRouterLink} to ="/">Home</Link>
+          <Link mx={4} as={ReactRouterLink} to="/">
+            Home
+          </Link>
           <Link mx={4}>About</Link>
           <Link mx={4}>Blog</Link>
-          <Link mx={4}  as={ReactRouterLink} to ="/contact">Contact</Link>
+          <Link mx={4} as={ReactRouterLink} to="/contact">
+            Contact
+          </Link>
           <Link mx={4}>FAQ</Link>
-          <Link mx={4} as={ReactRouterLink} to ="/terms">Terms</Link>
-          <Link mx={4}  as={ReactRouterLink} to ="/policies">Privacy</Link>
+          <Link mx={4} as={ReactRouterLink} to="/terms">
+            Terms
+          </Link>
+          <Link mx={4} as={ReactRouterLink} to="/policies">
+            Privacy
+          </Link>
         </Box>
-        <Box flex={1}>
-          <Button variant="outline">Log In</Button>
+        <Box flex={2}>
+          <Link mx={4} as={ReactRouterLink} to="/login">
+            <Button variant="outline">Log In</Button>
+          </Link>
           <Button variant="secondary" mx={4}>
             Get Started
           </Button>
