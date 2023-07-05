@@ -1,10 +1,10 @@
 import { StyleFunctionProps } from '@chakra-ui/styled-system';
 
-export const ButtonStyle = {   
+export const ButtonStyle = {
   sizes: {
     sm: {
       px: 5,
-      py: 3.5
+      py: 3.5,
     },
     md: {
       padding: { base: 12, lg: 6 },
@@ -16,7 +16,7 @@ export const ButtonStyle = {
       color: '#fff',
       width: '127px',
       fontWeight: '600',
-      borderRadius: "5px",
+      borderRadius: '5px',
       ':hover': {
         bg: props.theme.colors.secondary,
         boxShadow: 'md',
@@ -30,14 +30,14 @@ export const ButtonStyle = {
         ':hover': {
           bg: props.theme.colors.secondary,
           boxShadow: 'md',
-        }
-      }
+        },
+      },
     }),
     secondary: (props: StyleFunctionProps) => ({
       bg: props.theme.colors.secondary,
       color: props.theme.colors.primary,
       width: '127px',
-      borderRadius: "5px",
+      borderRadius: '5px',
       ':hover': {
         bg: props.theme.colors.primary,
         boxShadow: 'md',
@@ -51,8 +51,8 @@ export const ButtonStyle = {
         ':hover': {
           bg: props.theme.colors.secondary,
           boxShadow: 'md',
-        }
-      }
+        },
+      },
     }),
     noBg: (props: StyleFunctionProps) => ({
       ':hover': {
@@ -61,38 +61,48 @@ export const ButtonStyle = {
     }),
     outline: (props: StyleFunctionProps) => {
       return {
-      border: `1px solid ${ props.theme.colors.primary[props.colorMode === 'dark' ? 'dark': 'light']}`,
-      outline: 'red',
-      color:  props.theme.colors.primary[props.colorMode === 'dark' ? 'dark': 'light'],
-      borderRadius: "5px",
-      width: '127px',
-      ':hover': {
-        boxShadow: 'md',
-        bg: props.theme.colors.primary,
-        color: "#fff"
-      },
-    }},
+        border: `1px solid`,
+        borderColor: `${
+          props.theme.colors.primary[
+            props.colorMode === 'dark' ? 'dark' : 'light'
+          ]
+        }`,
+        outline: 'red',
+        color:
+          props.theme.colors.primary[
+            props.colorMode === 'dark' ? 'dark' : 'light'
+          ],
+        borderRadius: '5px',
+        ':hover': {
+          boxShadow: 'md',
+          bg: props.theme.colors.primary[
+            props.colorMode === 'dark' ? 'dark' : 'light'
+          ],
+          color: '#fff',
+        },
+      };
+    },
     half: (props: StyleFunctionProps) => ({
-        bg: props.theme.colors.primary,
-        color: '#fff',
-        ':hover': {
-          bg: props.theme.colors.secondary,
-          boxShadow: 'md',
-        },
-        width: '50%'
-      }),
+      bg: props.theme.colors.primary,
+      color: '#fff',
+      ':hover': {
+        bg: props.theme.colors.secondary,
+        boxShadow: 'md',
+      },
+      width: '50%',
+    }),
     full: (props: StyleFunctionProps) => ({
-        bg: props.theme.colors.primary.light,
-        color: '#fff',
-        ':hover': {
-          bg: props.theme.colors.secondary,
-          boxShadow: 'md',
-        },
-        width: '100%'
-      }),
+      bg: props.theme.colors.primary.light,
+      color: '#fff',
+      ':hover': {
+        bg: props.theme.colors.secondary,
+        boxShadow: 'md',
+      },
+      width: '100%',
+    }),
   },
   defaultProps: {
     size: 'md',
-    variant: 'normal'
+    variant: 'normal',
   },
 };
