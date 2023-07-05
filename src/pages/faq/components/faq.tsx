@@ -13,10 +13,10 @@ import {
 } from '@chakra-ui/react';
 import { ArrowForwardIcon } from '@chakra-ui/icons';
 import { FiPlusCircle, FiMinusCircle } from 'react-icons/fi';
-import { faqData } from '../helpers';
+import { faqData } from './../../main/helpers';
 import styled from 'styled-components';
 
-function FAQSection() {
+function FAQ() {
   const [activeIndex, setActiveIndex] = useState(0);
   const handleQuestionClick = (index: number) => {
     setActiveIndex(index === activeIndex ? -1 : index);
@@ -72,14 +72,13 @@ function FAQSection() {
               )}
             </Box>
           ))}
-          <Button variant="secondary" rightIcon={<ArrowForwardIcon />} marginTop={16}>See More</Button>
         </VStack>
       </Center>
     </Box>
   );
 }
 
-export default FAQSection;
+export default FAQ;
 
 const HeaderText = styled(Text)`
   font-weight: 400;

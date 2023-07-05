@@ -6,6 +6,7 @@ import Home from './pages/main';
 import Terms from './pages/terms';
 import Policies from './pages/policies';
 import Contact from './pages/contact';
+import FAQ from './pages/faq';
 import Layout from './common/Layout';
 import paths from 'common/paths';
 import SignIn from './pages/auth/SignIn';
@@ -39,6 +40,7 @@ function App() {
             <Route path={paths.terms} element={<Terms />} />
             <Route path={paths.policies} element={<Policies />} />
             <Route path={paths.contact} element={<Contact />} />{' '}
+            <Route path={paths.faq} element={<FAQ />} />{' '}
           </Route>
         </Routes>
       </ColorModeProvider>

@@ -19,7 +19,7 @@ function NavBar() {
           <Link mx={4} as={ReactRouterLink} to="/contact">
             Contact
           </Link>
-          <Link mx={4}>FAQ</Link>
+          <Link mx={4} as={ReactRouterLink} to="/faq">FAQ</Link>
           <Link mx={4} as={ReactRouterLink} to="/terms">
             Terms
           </Link>

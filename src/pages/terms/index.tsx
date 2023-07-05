@@ -26,7 +26,7 @@ function index() {
         </VStack>
       </Center>
       <VStack align="start" spacing={4} py={20}>
-        {termsData.sub.map((item,idx) => (
+        {termsData.sub.map((item, idx) => (
           <Box key={idx}>
             <Heading variant="quaternary" marginBottom={4}>
               {item.title}
