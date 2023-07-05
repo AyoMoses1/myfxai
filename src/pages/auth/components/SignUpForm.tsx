@@ -18,11 +18,10 @@ import styled from 'styled-components';
 
 function Form() {
   return (
-    <Container height="100%" px={25}>
-      <Flex h="100%" align="center" justify="center">
+    <StyledContainer height="100%" px={20} py={12}>
         <Box>
           <Heading variant="h1" color="blue2" marginBottom={4}>
-            Welcome Back
+            Join myFXai.com
           </Heading>
           <Text variant="quaternary" color="blue2">
             Our AI technology is here to help you succeed!
@@ -63,8 +62,7 @@ function Form() {
             </Stack>
           </StyledForm>
         </Box>
-      </Flex>
-    </Container>
+    </StyledContainer>
   );
 }
 
@@ -72,4 +70,10 @@ export default Form;
 
 const StyledForm = styled('form')`
   margin-top: 42px;
+
 `;
+
+const StyledContainer = styled(Container)`
+  box-shadow: 2px 8px 26px 2px rgba(0, 0, 0, 0.08);
+  border-image: linear-gradient(to left, blue 28.27%, rgba(255, 255, 255, 0) 100%);
+  `;

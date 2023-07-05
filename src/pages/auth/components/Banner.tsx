@@ -12,10 +12,10 @@ function Banner() {
     <Container height="100%" px={28}>
       <Flex h="100%" align="center" justify="center">
         <Box>
-          <Heading variant="primary" color="white" marginBottom={12}>
+          <Heading variant="primary" marginBottom={12}>
             Take your trading game to the next level.{' '}
           </Heading>
-          <Text variant="body" color="authText" textStyle="auth">
+          <Text variant="body" textStyle="auth">
             Ready to get started? <br /> Sign up now and experience the power of
             AI trading for yourself. It's easy to join – simply fill out the
             form and start trading smarter today!

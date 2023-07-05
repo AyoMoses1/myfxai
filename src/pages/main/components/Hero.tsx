@@ -9,13 +9,23 @@ import {
   Text,
   Icon,
   useColorMode,
+  Image,
 } from '@chakra-ui/react';
-import { ArrowForwardIcon } from '@chakra-ui/icons';
+import { ArrowForwardIcon} from '@chakra-ui/icons';
 import { FaPlay } from 'react-icons/fa';
 import myImage from 'assets/images/LooperGroup.png';
+import switchL from 'assets/icons/switchl.png';
+import switchD from 'assets/icons/switchd.png';
 
 function Hero() {
   const { colorMode, toggleColorMode } = useColorMode();
+  const renderIcon = () => {
+    if (colorMode === 'light') {
+      return <Image src={switchL} onClick={toggleColorMode} />;
+    } else {
+      return <Image src={switchD} onClick={toggleColorMode} />;
+    }
+  };
   return (
     <Box px={28}>
       <Grid templateColumns="repeat(2, 1fr)" gap={6}>
@@ -25,9 +35,6 @@ function Hero() {
             Trade smarter with MyFXai.com - The AI-powered trading platform that
             maximizes your profits.
           </Text>
-          <Button onClick={toggleColorMode}>
-            {colorMode === 'light' ? 'Dark' : 'Light'} Mode
-          </Button>
           <ButtonGroup>
             <Button variant="secondary" rightIcon={<ArrowForwardIcon />}>
               Get Started
@@ -53,8 +60,11 @@ function Hero() {
             </Button>
           </ButtonGroup>
         </GridItem>
-        <GridItem>
+        <GridItem
+          sx={{ position: 'relative', display: 'flex', alignItems: 'center' }}
+        >
           <img src={myImage} alt="Hero" />
+          {renderIcon()}
         </GridItem>
       </Grid>
     </Box>

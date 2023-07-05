@@ -14,8 +14,8 @@ import Banner from './components/Banner';
 function SignUp() {
   return (
     <Flex height="100vh">
-      <Grid templateColumns="repeat(2, 1fr)" height="100%">
-        <GridItem bgColor="authBg" height="100%">
+      <Grid templateColumns="repeat(2, 1fr)" height="100%" py={50}>
+        <GridItem height="100%">
           <Banner />
         </GridItem>
         <GridItem>
