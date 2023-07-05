@@ -62,3 +62,26 @@ export const footerInfo = [
     ],
   },
 ];
+
+export const socialIcons = [
+  <FaTwitter />,
+  <FaFacebook />,
+  <FaInstagram />,
+  <FaGithub />,
+];
+
+export const links = [
+  {
+    name: 'About',
+    path: paths.about,
+  },
+  {
+    name: 'Features',
+    path: paths.about,
+  },
+  {
+    name: 'Customer Support',
+    path: paths.about,
+  },
+];
+

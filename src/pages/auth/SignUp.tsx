@@ -1,28 +1,24 @@
 import React from 'react';
-import {
-  Grid,
-  GridItem,
-  Flex,
-  Heading,
-  Text,
-  Container,
-  Box,
-} from '@chakra-ui/react';
+import { Grid, GridItem, Flex, Box } from '@chakra-ui/react';
 import Form from './components/SignUpForm';
 import Banner from './components/Banner';
+import AuthNav from 'common/AuthNav';
+import AuthFooter from './../../common/AuthFooter';
 
 function SignUp() {
   return (
-    <Flex height="100vh">
-      <Grid templateColumns="repeat(2, 1fr)" height="100%" py={50}>
-        <GridItem height="100%">
-          <Banner />
-        </GridItem>
-        <GridItem>
-          <Form />
-        </GridItem>
-      </Grid>
-    </Flex>
+    <Box>
+      <Flex>
+        <Grid templateColumns="repeat(2, 1fr)">
+          <GridItem>
+            <Banner />
+          </GridItem>
+          <GridItem px={20}>
+            <Form />
+          </GridItem>
+        </Grid>
+      </Flex>
+    </Box>
   );
 }
 
