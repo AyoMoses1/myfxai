@@ -26,7 +26,14 @@ function App() {
               </AuthLayout>
             }
           />
-          <Route path={paths.login} element={<SignIn />} />
+          <Route
+            path={paths.login}
+            element={
+              <AuthLayout>
+                <SignIn />
+              </AuthLayout>
+            }
+          />
           <Route path={paths.home} element={<Layout />}>
             <Route path={paths.home} element={<Home />} />
             <Route path={paths.terms} element={<Terms />} />
