@@ -7,7 +7,6 @@ import {
   Image,
   HStack,
   useColorMode,
-  border,
 } from '@chakra-ui/react';
 import styled from 'styled-components';
 import a1 from 'assets/avatars/a1.png';

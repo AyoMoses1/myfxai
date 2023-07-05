@@ -11,7 +11,6 @@ import {
   Heading,
   Divider,
 } from '@chakra-ui/react';
-import { ArrowForwardIcon } from '@chakra-ui/icons';
 import { FiPlusCircle, FiMinusCircle } from 'react-icons/fi';
 import { faqData } from './../../main/helpers';
 import styled from 'styled-components';
