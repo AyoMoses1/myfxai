@@ -10,12 +10,11 @@ import {
   Flex,
 } from '@chakra-ui/react';
 import styled from 'styled-components';
-import { footerInfo, links, socialIcons } from './helpers';
+import {  links, socialIcons } from './helpers';
 
 function AuthFooter() {
   const { colorMode } = useColorMode();
   const bgColor = colorMode === 'dark' ? 'primary.light' : 'lighterBlue';
-  const linkColor = colorMode === 'dark' ? 'textWhite' : 'primary.light';
 
   return (
     <StyledBox bg={bgColor} color="white" paddingTop={2}>

@@ -1,15 +1,16 @@
 import React from 'react';
-import { Flex, Box, Link, Text, Button } from '@chakra-ui/react';
+import { Flex, Box, Link, Button, Image } from '@chakra-ui/react';
 import { Link as ReactRouterLink } from 'react-router-dom';
+import logo from 'assets/icons/logo.png';
 
 function NavBar() {
   return (
     <Box px={5}>
-      <Flex p={4} align="center">
-        <Box flex={2}>
-          <Text>Logo</Text>
+      <Flex p={4} align="center" justify="space-between">
+        <Box>
+          <Image src={logo} />
         </Box>
-        <Box flex={2}>
+        <Box>
           <Link mx={4} as={ReactRouterLink} to="/">
             Home
           </Link>
@@ -26,7 +27,7 @@ function NavBar() {
             Privacy
           </Link>
         </Box>
-        <Box flex={2}>
+        <Box >
           <Link mx={4} as={ReactRouterLink} to="/login">
             <Button variant="outline">Log In</Button>
           </Link>

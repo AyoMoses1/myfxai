@@ -1,5 +1,5 @@
 import React from 'react';
-import { Flex, Box, Link, Text, Button, Image } from '@chakra-ui/react';
+import { Flex, Box, Link, Button, Image } from '@chakra-ui/react';
 import { Link as ReactRouterLink } from 'react-router-dom';
 import logo from 'assets/icons/logo.png';
 
