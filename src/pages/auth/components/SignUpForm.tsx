@@ -12,9 +12,12 @@ import {
   Stack,
   Link,
   Checkbox,
+  Image,
+  HStack,
 } from '@chakra-ui/react';
 import { Link as ReactRouterLink } from 'react-router-dom';
 import styled from 'styled-components';
+import google from 'assets/icons/google.png';
 
 function Form() {
   return (
@@ -32,15 +35,15 @@ function Form() {
           <Stack spacing={4}>
             <FormControl id="email">
               <FormLabel>Full Name</FormLabel>
-              <Input type="text" variant="outline" autoComplete="off" />
+              <Input type="text" variant="fadeBorder" autoComplete="off" />
             </FormControl>
             <FormControl id="email">
               <FormLabel>Email Address</FormLabel>
-              <Input type="email" variant="outline" autoComplete="off" />
+              <Input type="email" variant="fadeBorder" autoComplete="off" />
             </FormControl>
             <FormControl id="password">
               <FormLabel>Password</FormLabel>
-              <Input type="password" variant="outline" />
+              <Input type="password" variant="fadeBorder" />
             </FormControl>
             <Flex justifyContent="space-between" align="center">
               <Checkbox defaultChecked color="gray4">
@@ -50,11 +53,14 @@ function Form() {
                 Forgot Password?
               </Link>
             </Flex>
-            <Link as={ReactRouterLink} to="/">
-              <Button type="submit" variant="primary" size="lg">
-                Sign Up
-              </Button>
-            </Link>
+            <HStack spacing={4}>
+              <Link as={ReactRouterLink} to="/">
+                <Button type="submit" variant="primary" size="lg">
+                  Sign Up
+                </Button>
+              </Link>
+              <Image src={google} alt="google-auth" />
+            </HStack>
             <Text variant="quaternary" color="blue2">
               Already have an account?{' '}
               <Link as={ReactRouterLink} to="/login" color="lightBlue">
@@ -76,9 +82,10 @@ const StyledForm = styled('form')`
 
 const StyledContainer = styled(Container)`
   box-shadow: 2px 8px 26px 2px rgba(0, 0, 0, 0.08);
-  border-image: linear-gradient(
-    to left,
-    blue 28.27%,
-    rgba(255, 255, 255, 0) 100%
-  );
+  border: 1.49px solid;
+  border-image-slice: 1;
+  border-image-width: 1px;
+  border-image-outset: 0;
+  border-image-repeat: stretch;
+  border-image: linear-gradient(to right, #AED8FF 28.27%, rgba(128, 128, 128, 0.5) 100%) 1;
 `;

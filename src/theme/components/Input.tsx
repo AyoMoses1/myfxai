@@ -31,6 +31,23 @@ export const InputStyle = {
         },
       },
     }),
+    fadeBorder: (props: StyleFunctionProps) => ({
+      field: {
+        borderWidth: '1.49px',
+        borderImageSlice: 1,
+        borderImageWidth: '1px',
+        borderImageOutset: 0,
+        borderImageRepeat: 'stretch',
+        borderImageSource:
+          'linear-gradient(to right, grey 28.27%, white 100%)',
+        borderRadius: '10px',
+        borderColor: 'transparent',
+        _focus: {
+          borderWidth: '1.49px',
+          // borderColor: 'transparent',
+        },
+      },
+    }),
   },
   defaultProps: {
     size: 'md',

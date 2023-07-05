@@ -1,5 +1,4 @@
 import React, { ReactNode } from 'react';
-import { Outlet } from 'react-router-dom';
 import AuthNav from './AuthNav';
 import AuthFooter from './AuthFooter';
 import { Box } from '@chakra-ui/react';

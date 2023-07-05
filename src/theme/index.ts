@@ -52,7 +52,7 @@ const theme = extendTheme({
     textWhite: '#EFEFEF',
     background: '#141414',
     lightBlue: '#3188D8',
-    lighterBlue: ' #AED8FF',
+    lighterBlue: '#AED8FF',
     matteGreen: '#50B887',
     mainGreen: {
       light: '#F2FFF1',
