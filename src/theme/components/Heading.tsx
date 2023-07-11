@@ -61,6 +61,12 @@ export const HeadingStyle = {
       fontSize: '18px',
       color: props.theme.colors.primary,
     }),
+    formHeader: (props: StyleFunctionProps) => ({
+      fontWeight: '600',
+      fontSize: '18px',
+      color: props.theme.colors.primary.light,
+      lineHeight: '30px'
+    }),
     defaultProps: {
       size: 'md',
       variant: 'primary',

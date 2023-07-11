@@ -10,6 +10,7 @@ import Clickable from './Clickable';
 import NavMole from './NavMole';
 import { NavLink } from 'react-router-dom';
 import { VscTriangleDown, VscTriangleRight } from 'react-icons/vsc';
+import { SubNav } from 'types';
 
 type Props = {
   sub: SubNav[] ;

@@ -8,6 +8,7 @@ import Policies from './pages/policies';
 import Contact from './pages/contact';
 import FAQ from './pages/faq';
 import Dashboard from './pages/dashboard';
+import Trade from './pages/trade';
 import Layout from './common/Layout';
 import paths from 'utils/paths';
 import SignIn from './pages/auth/SignIn';
@@ -46,6 +47,7 @@ function App() {
           </Route>
           <Route path={paths.home} element={<AuthorizedLayout />}>
             <Route path={paths.dashboard} element={<Dashboard />} />
+            <Route path={paths.trade} element={<Trade />} />
           </Route>
         </Routes>
       </ColorModeProvider>

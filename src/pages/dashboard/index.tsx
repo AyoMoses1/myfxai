@@ -3,12 +3,9 @@ import {
   Box,
   Button,
   Container,
-  Heading,
   Text,
-  useDisclosure,
 } from '@chakra-ui/react';
 import ModalComponent from 'common/Modal';
-import { FiBell } from 'react-icons/fi';
 
 const Index = () => {
   const [modalOpen, setModalOpen] = useState(true);

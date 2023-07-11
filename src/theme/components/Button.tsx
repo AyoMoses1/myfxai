@@ -14,7 +14,6 @@ export const ButtonStyle = {
     primary: (props: StyleFunctionProps) => ({
       bg: props.theme.colors.blue1,
       color: '#fff',
-      width: '127px',
       fontWeight: '600',
       borderRadius: '5px',
       ':hover': {

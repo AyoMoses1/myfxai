@@ -36,11 +36,12 @@ export const InputStyle = {
         borderWidth: '1.49px',
         borderImageSlice: 1,
         borderImageWidth: '1px',
+        borderImageRadius:'12px',
         borderImageOutset: 0,
         borderImageRepeat: 'stretch',
         borderImageSource:
           'linear-gradient(to right, grey 28.27%, white 100%)',
-        borderRadius: '10px',
+        borderRadius: '12px',
         borderColor: 'transparent',
         _focus: {
           borderWidth: '1.49px',
