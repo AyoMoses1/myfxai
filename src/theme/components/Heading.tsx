@@ -19,9 +19,9 @@ export const HeadingStyle = {
         props.theme.colors.primary[
           props.colorMode === 'dark' ? 'dark' : 'light'
         ],
-        fontSize: '60px',
-        fontStyle: "semi-bold",
-        lineHeight: "72px"
+      fontSize: '60px',
+      fontStyle: 'semi-bold',
+      lineHeight: '72px',
     }),
     secondary: (props: StyleFunctionProps) => ({
       color:
@@ -46,6 +46,15 @@ export const HeadingStyle = {
           : props.theme.colors.heroText,
       fontWeight: '500',
       fontSize: '28px',
+    }),
+    modalHeader: (props: StyleFunctionProps) => ({
+      color:
+        props.colorMode === 'dark'
+          ? props.theme.colors.primary['dark']
+          : '#101828',
+      fontWeight: '500',
+      lineHeight: '28px',
+      fontSize: '18px',
     }),
     cardHeader: (props: StyleFunctionProps) => ({
       fontWeight: '700',

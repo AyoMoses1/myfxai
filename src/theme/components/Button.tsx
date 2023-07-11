@@ -12,7 +12,7 @@ export const ButtonStyle = {
   },
   variants: {
     primary: (props: StyleFunctionProps) => ({
-      bg: props.theme.colors.primary.light,
+      bg: props.theme.colors.blue1,
       color: '#fff',
       width: '127px',
       fontWeight: '600',
@@ -22,7 +22,7 @@ export const ButtonStyle = {
         boxShadow: 'md',
       },
       ':focus': {
-        bg: props.theme.colors.secondary,
+        bg: props.theme.colors.primary.light,
         boxShadow: 'md',
       },
       ':disabled': {
