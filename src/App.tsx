@@ -7,12 +7,14 @@ import Terms from './pages/terms';
 import Policies from './pages/policies';
 import Contact from './pages/contact';
 import FAQ from './pages/faq';
+import Dashboard from './pages/dashboard';
 import Layout from './common/Layout';
-import paths from 'common/paths';
+import paths from 'utils/paths';
 import SignIn from './pages/auth/SignIn';
 import SignUp from 'pages/auth/SignUp';
 import { ColorModeProvider } from '@chakra-ui/react';
 import AuthLayout from 'common/AuthLayout';
+import AuthorizedLayout from 'common/AuthorizedLayout';
 
 function App() {
   return (
@@ -41,6 +43,9 @@ function App() {
             <Route path={paths.policies} element={<Policies />} />
             <Route path={paths.contact} element={<Contact />} />{' '}
             <Route path={paths.faq} element={<FAQ />} />{' '}
+          </Route>
+          <Route path={paths.home} element={<AuthorizedLayout />}>
+            <Route path={paths.dashboard} element={<Dashboard />} />
           </Route>
         </Routes>
       </ColorModeProvider>

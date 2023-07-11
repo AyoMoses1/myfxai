@@ -11,6 +11,14 @@ export const TextStyle = {
       color: props.theme.colors.muted,
       textAlign: 'center',
     }),
+    smallMuted: () => ({
+      color: '#898780',
+      fontFamily: 'Inter',
+      fontSize: '10px',
+      fontStyle: 'normal',
+      fontWeight: 500,
+      lineHeight: '6px',
+    }),
     normalBold: (props: StyleFunctionProps) => ({
       fontWeight: '600',
     }),
@@ -20,6 +28,14 @@ export const TextStyle = {
     }),
     nav: (props: StyleFunctionProps) => ({
       fontSize: { base: '16px', lg: '1.1vw' },
+      fontFamily: 'Inter',
+      fontStyle: 'normal',
+      fontWeight: 700,
+      lineHeight: 'normal',
+      color:
+        props.colorMode === 'dark'
+          ? props.theme.colors.primary['dark']
+          : props.theme.colors.gray1,
     }),
     whiteBoldNormal: (props: StyleFunctionProps) => ({
       fontWeight: 'bold',

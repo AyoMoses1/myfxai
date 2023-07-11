@@ -54,6 +54,10 @@ const theme = extendTheme({
     lightBlue: '#3188D8',
     lighterBlue: '#AED8FF',
     matteGreen: '#50B887',
+    dashboardBg: {
+      light: '#F6F9FC',
+      dark: 'black'
+    },
     mainGreen: {
       light: '#F2FFF1',
       dark: '#212E27',

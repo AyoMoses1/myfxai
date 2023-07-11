@@ -1,4 +1,4 @@
-import paths from './paths';
+import paths from '../utils/paths';
 import { FaTwitter, FaFacebook, FaInstagram, FaGithub } from 'react-icons/fa';
 
 export const jumbotronData = {
@@ -84,4 +84,3 @@ export const links = [
     path: paths.about,
   },
 ];
-
