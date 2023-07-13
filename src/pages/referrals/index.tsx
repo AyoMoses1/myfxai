@@ -1,12 +1,22 @@
 import React, { useState } from 'react';
-import { Box, Button, Container, Text, Icon } from '@chakra-ui/react';
+import {
+  Box,
+  Button,
+  Container,
+  Text,
+  Icon,
+  GridItem,
+  Grid,
+} from '@chakra-ui/react';
 import DynamicTable from 'common/DynamicTable';
 import ModalComponent from 'common/Modal';
 import { FaDollarSign, FaFilter } from 'react-icons/fa';
 import { FiArrowUp } from 'react-icons/fi';
 import TableTop from 'common/TableTop';
 import { data } from './data';
-import { columns, tableTopInput } from './helpers';
+import { cardsInfo, columns } from './helpers';
+import Card from './components/Card';
+import { RiFileCopy2Line } from 'react-icons/ri';
 
 const Index = () => {
   const [modalOpen, setModalOpen] = useState(true);
@@ -26,7 +36,7 @@ const Index = () => {
     { name: 'Filter', onClick: onOpen, icon: <FaFilter color="#5B6871" /> },
     { name: 'Export', onClick: onOpen, icon: <FiArrowUp color="#5B6871" /> },
     {
-      name: 'Export',
+      name: 'Withdraw',
       onClick: onOpen,
       icon: (
         <Icon
@@ -68,6 +78,14 @@ const Index = () => {
     );
   };
 
+  const cardElements = cardsInfo.map((info, idx) => {
+    return (
+      <GridItem key={idx}>
+        <Card title={info.title} value={info.value} bgColor={info.bgColor} />
+      </GridItem>
+    );
+  });
+
   return (
     <>
       <ModalComponent
@@ -90,18 +108,23 @@ const Index = () => {
       </ModalComponent>
       {showHistory && (
         <Box bg="white" px={5} pt={8} mr={8} mb={12}>
-          <TableTop
-            onChange={handleInputChange}
-            inputObj={tableTopInput}
-            buttons={topTableButtons}
-            title="Trade History"
-            info="View your trade history"
-          />
-          {/* {isLoading ? (
-            <Box>...Loading</Box>
-          ) : ( */}
+          <Grid templateColumns="repeat(5, 1fr)" gap={6} mb={8}>
+            {cardElements}
+            <Grid style={{ cursor: 'pointer' }}>
+              <Box display="flex" alignItems="center">
+                <RiFileCopy2Line size={24}/>
+                <Text pl={2} variant="smallMuted">Copy Referral Link</Text>
+              </Box>
+            </Grid>
+          </Grid>
+          <Box mb={14}>
+            <TableTop
+              onChange={handleInputChange}
+              buttons={topTableButtons}
+              title="Referrals"
+            />
+          </Box>
           <DynamicTable columns={columns} data={data} />
-          {/* )} */}
         </Box>
       )}
     </>

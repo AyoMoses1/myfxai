@@ -7,10 +7,7 @@ import * as yup from 'yup';
 import { FieldErrorsImpl, UseFormRegister } from 'react-hook-form';
 import { RiSearchLine } from 'react-icons/ri';
 
-import {
-  Tag,
-  Checkbox,
-} from '@chakra-ui/react';
+import { Tag, Checkbox, Text } from '@chakra-ui/react';
 
 const statusTypes = [
   { name: 'Buy', color: 'matteGreen', bgColor: 'matteGreenFade' },
@@ -56,135 +53,42 @@ export const columns: ITDataColumnDef<ITData>[] = [
     header: 'Billing Date',
     cell: (info) => info.getValue(),
   }),
-  columnHelper.accessor('side', {
-    cell: (info) => getStatusTag(info.getValue<string>()),
+  columnHelper.accessor('amount', {
+    cell: (info) => (
+      <Text
+        color="tableHeader"
+        style={{
+          wordBreak: 'keep-all',
+          fontWeight: '700',
+          fontSize: '14px',
+          fontFamily: 'Inter',
+        }}
+      >
+        ${info.getValue<string>()}
+      </Text>
+    ),
   }),
 ];
 
-export const inputObjList = (
-  register: UseFormRegister<TFormValues>,
-  errors: FieldErrorsImpl<TFormValues>
-) => [
+export const cardsInfo = [
   {
-    name: 'name',
-    label: 'Task',
-    placeholder: '',
-    type: 'text',
-    register: register('name', {
-      required: 'Please enter a valid task name',
-    }),
-    isInvalid: !!errors.name,
-    error: errors?.name,
+    title: 'Total Number of Referrals',
+    value: '123',
+    bgColor: 'lighterBlue',
   },
   {
-    name: 'description',
-    label: 'Description',
-    placeholder: '',
-    type: 'text',
-    register: register('description'),
-    isInvalid: !!errors.description,
-    error: errors?.description,
+    title: 'Amount Earned',
+    value: '$500',
+    bgColor: 'lighterBlue',
   },
   {
-    name: 'project',
-    label: 'Project',
-    placeholder: 'Enter email address',
-    type: 'select',
-    options: [
-      { value: 'pending', name: 'Pending' },
-      { value: 'inProgress', name: 'Active' },
-      { value: 'completed', name: 'Suspended' },
-    ],
-
-    register: register('project', {
-      required: 'Please select a parent object',
-    }),
-    isInvalid: !!errors.project,
-    error: errors?.project,
+    title: 'Amount Withdrawn',
+    value: '$300',
+    bgColor: 'lighterBlue',
   },
   {
-    name: 'assignedTo',
-    label: 'Assignee',
-    type: 'select',
-    options: [
-      { value: 'PENDING', name: 'Pending' },
-      { value: 'ACTIVE', name: 'Active' },
-      { value: 'SUSPENDED', name: 'Suspended' },
-      { value: 'IN_ACTIVE', name: 'Inactive' },
-      { value: 'ON_HOLD', name: 'On hold' },
-    ],
-    register: register('assignedTo', {
-      required: 'Please select an assignee',
-    }),
-    isInvalid: !!errors.assignedTo,
-    error: errors?.assignedTo,
-  },
-];
-
-export const tableTopInput = [
-  {
-    name: 'search',
-    label: '',
-    placeholder: 'What history are you looking for?',
-    type: 'text',
-    icon: <RiSearchLine color="#B0BABF" />,
-    width: '60%',
-    variant: 'tableInput',
-  },
-];
-
-export const tempData = {
-  fullName: 'Adeniji Adefisayo',
-  state: 'Osun',
-  walletBalance: 2300,
-  ageBracket: 'THIRTYONE_TO_FORTY',
-  mobileNo: '+23498019290019',
-  email: 'test@yahoo.com',
-};
-
-const orderStatuses = [
-  { value: 'COMPLETED', name: 'Completed' },
-  { value: 'PENDING', name: 'Pending' },
-  { value: 'PROCESSING', name: 'Processing' },
-  { value: 'CANCELLED', name: 'Cancelled' },
-  { value: '', name: 'All' },
-];
-
-export const historyTableTopInput: InputObj[] = [
-  {
-    name: 'query',
-    label: '',
-    placeholder: 'Order Number',
-    type: 'text',
-  },
-  {
-    name: 'status',
-    label: '',
-    placeholder: 'Filter by Status',
-    type: 'select',
-    defaultValue: '',
-    options: orderStatuses.map(({ value, name }) => ({ value, name })),
-  },
-
-  {
-    name: 'dateRange',
-    label: '',
-    placeholder: '',
-    type: 'dateRange',
-  },
-];
-
-export const data = [
-  {
-    name: 'Valon Timesheet',
-    description: 'This is just a test project',
-  },
-  {
-    name: 'Valon Notepad',
-    description: 'This is just a test project',
-  },
-  {
-    name: 'Valon Timesheet',
-    description: 'This is just a test project',
+    title: 'Referral Balance',
+    value: '$200',
+    bgColor: 'lightBlue',
   },
 ];

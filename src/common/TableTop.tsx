@@ -19,7 +19,7 @@ const TableTop = ({
   title,
   info,
 }: {
-  inputObj: InputObj[];
+  inputObj?: InputObj[];
   buttons?: {
     name: string;
     icon: ReactElement;
@@ -45,7 +45,7 @@ const TableTop = ({
   return (
     <Box pr={12}>
       {' '}
-      {inputObj.map((input) => (
+      {inputObj?.map((input) => (
         <Box
           key={input.name}
           mr={2}
