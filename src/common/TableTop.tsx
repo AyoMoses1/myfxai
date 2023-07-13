@@ -20,7 +20,12 @@ const TableTop = ({
   info,
 }: {
   inputObj: InputObj[];
-  buttons?: { name: string; icon: ReactElement; onClick: () => void }[];
+  buttons?: {
+    name: string;
+    icon: ReactElement;
+    onClick: () => void;
+    variant?: string;
+  }[];
   onChange: (name: string, value: string | Record<string, Date>) => void;
   title: string;
   info?: string;
@@ -67,11 +72,12 @@ const TableTop = ({
           {buttons?.map((button) => (
             <Box key={button.name}>
               <Button
-                variant="outline"
+                variant={button.variant ?? 'outline'}
                 onClick={() => onClick(button.name)}
                 leftIcon={button.icon}
                 borderColor="#E5E9EB"
-                color="#252C32"
+                color={button.variant ? "white": "#252C32"}
+                size="sm"
               >
                 {button.name}
               </Button>

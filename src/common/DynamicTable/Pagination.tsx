@@ -50,7 +50,7 @@ const Pagination = ({
         display="flex"
         justifyContent={{ base: "left", md: "right" }}
         alignItems="center"
-        my={4}
+        my={2}
       >
         <Flex>
           <Box pt={2} mr={2}>

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { Box, Button, Container, Text } from '@chakra-ui/react';
+import { Box, Button, Container, Text, Icon } from '@chakra-ui/react';
 import DynamicTable from 'common/DynamicTable';
 import ModalComponent from 'common/Modal';
-import { FaFilter } from 'react-icons/fa';
+import { FaDollarSign, FaFilter } from 'react-icons/fa';
 import { FiArrowUp } from 'react-icons/fi';
 import TableTop from 'common/TableTop';
 import { data } from './data';
@@ -25,6 +25,25 @@ const Index = () => {
   const topTableButtons = [
     { name: 'Filter', onClick: onOpen, icon: <FaFilter color="#5B6871" /> },
     { name: 'Export', onClick: onOpen, icon: <FiArrowUp color="#5B6871" /> },
+    {
+      name: 'Export',
+      onClick: onOpen,
+      icon: (
+        <Icon
+          as={FaDollarSign}
+          color="white"
+          sx={{
+            borderColor: 'white',
+            border: '1px solid',
+            borderRadius: '50%',
+            width: '20px',
+            height: '20px',
+            padding: '2px',
+          }}
+        />
+      ),
+      variant: 'primary',
+    },
   ];
 
   const handleClose = () => {
