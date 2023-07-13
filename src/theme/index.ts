@@ -47,6 +47,9 @@ const theme = extendTheme({
     gray1: '#333333',
     gray3: '#BDBDBD',
     gray4: '#18181B',
+    gray5: '#B0BABF',
+    tableHeader: '#363636',
+    tableData: '#191D23',
     heroText: '#383737',
     textDark: '#1C1C1C',
     textWhite: '#EFEFEF',
@@ -54,6 +57,7 @@ const theme = extendTheme({
     lightBlue: '#3188D8',
     lighterBlue: '#AED8FF',
     matteGreen: '#50B887',
+    matteGreenFade: '#ECFDF5',
     dashboardBg: {
       light: '#F6F9FC',
       dark: 'black'
@@ -64,6 +68,7 @@ const theme = extendTheme({
     },
     darkGreen: '#65D19E',
     errorRed: '#E13131',
+    errorRedFade: '#FEF2F2',
 
     mattePink: '#E0B7C7',
     deepMattePink: '#B4557A',

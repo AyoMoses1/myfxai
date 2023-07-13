@@ -9,6 +9,7 @@ import Contact from './pages/contact';
 import FAQ from './pages/faq';
 import Dashboard from './pages/dashboard';
 import Trade from './pages/trade';
+import History from './pages/history';
 import Layout from './common/Layout';
 import paths from 'utils/paths';
 import SignIn from './pages/auth/SignIn';
@@ -48,6 +49,7 @@ function App() {
           <Route path={paths.home} element={<AuthorizedLayout />}>
             <Route path={paths.dashboard} element={<Dashboard />} />
             <Route path={paths.trade} element={<Trade />} />
+            <Route path={paths.history} element={<History />} />
           </Route>
         </Routes>
       </ColorModeProvider>

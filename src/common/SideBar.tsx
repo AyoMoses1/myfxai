@@ -55,7 +55,6 @@ const Index = () => {
       <Box
         display="flex"
         flexDirection="column"
-        height="78%"
         width="100%"
         overflow="auto"
       >

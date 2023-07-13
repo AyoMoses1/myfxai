@@ -67,6 +67,12 @@ export const pathObject = [
     borderBottom: false,
   },
   {
+    name: NavNames.history,
+    path: paths.history,
+    icon: <FaWarehouse />,
+    borderBottom: false,
+  },
+  {
     name: NavNames.referrals,
     path: paths.referrals,
     icon: <FaWarehouse />,

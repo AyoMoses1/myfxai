@@ -86,6 +86,16 @@ export const TextStyle = {
           ? props.theme.colors.textWhite
           : props.theme.colors.gray1,
     }),
+    tableCaption: (props: StyleFunctionProps) => ({
+      fontWeight: '400',
+      fontSize: 14,
+      lineHeight: 6,
+      letterSpacing: '-0.084px',
+      color:
+        props.colorMode === 'dark'
+          ? props.theme.colors.textWhite
+          : '#363636',
+    }),
     headerCaption: (props: StyleFunctionProps) => ({
       fontWeight: '500',
       fontSize: 18,

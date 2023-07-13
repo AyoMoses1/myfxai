@@ -61,11 +61,19 @@ export const HeadingStyle = {
       fontSize: '18px',
       color: props.theme.colors.primary,
     }),
+    tableHeading: (props: StyleFunctionProps) => ({
+      fontWeight: '700',
+      fontSize: '24px',
+      color:
+        props.colorMode === 'dark'
+          ? props.theme.colors.primary['dark']
+          : '#252C32',
+    }),
     formHeader: (props: StyleFunctionProps) => ({
       fontWeight: '600',
       fontSize: '18px',
       color: props.theme.colors.primary.light,
-      lineHeight: '30px'
+      lineHeight: '30px',
     }),
     defaultProps: {
       size: 'md',
