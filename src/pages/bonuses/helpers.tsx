@@ -85,3 +85,19 @@ export const cardsInfo = [
     bgColor: 'deepMattePink',
   },
 ];
+
+export const tabs = [
+  {
+    name: "Ranking"
+  },
+  {
+    name: "Stage 1"
+  },
+  {
+    name: "Stage 2"
+  },
+  {
+    name: "Stage 3"
+  }
+]
+

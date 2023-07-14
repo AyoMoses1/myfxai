@@ -12,6 +12,10 @@ import {
   CircularProgressLabel,
   Image,
   HStack,
+  Tabs,
+  TabList,
+  Tab,
+  TabIndicator,
 } from '@chakra-ui/react';
 import DynamicTable from 'common/DynamicTable';
 import ModalComponent from 'common/Modal';
@@ -19,7 +23,7 @@ import { FaDollarSign, FaFilter } from 'react-icons/fa';
 import { FiArrowUp } from 'react-icons/fi';
 import TableTop from 'common/TableTop';
 import { data } from './data';
-import { cardsInfo, columns } from './helpers';
+import { cardsInfo, columns, tabs } from './helpers';
 import Card from './components/Card';
 import member from 'assets/icons/medal.png';
 import { RiFileCopy2Line } from 'react-icons/ri';
@@ -101,6 +105,21 @@ const Index = () => {
             title="Referrals"
           />
         </Box>
+        <Tabs mt={4} variant="unstyled">
+          <TabList>
+            {tabs.map((tab) => (
+              <Tab _selected={{ color: 'blue1', fontWeight: 600 }}>
+                {tab.name}
+              </Tab>
+            ))}
+          </TabList>
+          <TabIndicator
+            mt="-1.5px"
+            height="2px"
+            bg="#191D23"
+            borderRadius="1px"
+          />
+        </Tabs>
         <DynamicTable columns={columns} data={data} />
       </Box>
     </>
