@@ -12,6 +12,7 @@ import Trade from './pages/trade';
 import History from './pages/history';
 import Referrals from './pages/referrals';
 import Bonuses from './pages/bonuses';
+import Invoices from './pages/invoices';
 import Layout from './common/Layout';
 import paths from 'utils/paths';
 import SignIn from './pages/auth/SignIn';
@@ -54,6 +55,7 @@ function App() {
             <Route path={paths.history} element={<History />} />
             <Route path={paths.referrals} element={<Referrals />} />
             <Route path={paths.bonuses} element={<Bonuses />} />
+            <Route path={paths.invoices} element={<Invoices />} />
           </Route>
         </Routes>
       </ColorModeProvider>

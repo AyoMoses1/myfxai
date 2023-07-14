@@ -81,6 +81,13 @@ export const ButtonStyle = {
         },
       };
     },
+    disabled: (props: StyleFunctionProps) => ({
+      bg: '#E7EAEE',
+      color: props.theme.colors.muted,
+      ':hover': {
+        bg: '#E7EAEE',
+      },
+    }),
     half: (props: StyleFunctionProps) => ({
       bg: props.theme.colors.primary,
       color: '#fff',
