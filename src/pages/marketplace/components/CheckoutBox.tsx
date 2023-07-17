@@ -11,12 +11,7 @@ import styled from 'styled-components';
 
 const CheckoutBox = () => {
   return (
-    <StyledBox
-      p={4}
-      borderRadius="md"
-      height="70vh"
-      position="relative"
-    >
+    <StyledBox p={4} borderRadius="md" height="70vh" position="relative">
       <Grid templateColumns="repeat(1, 1fr)">
         <GridItem>
           <HStack mb={4} justifyContent="space-between">
@@ -57,14 +52,10 @@ const CheckoutBox = () => {
 export default CheckoutBox;
 
 const StyledDivider = styled(Divider)`
-  background: linear-gradient(
-    0deg,
-    #8c8c8c 0%,
-    rgba(234, 236, 240, 0) 100%
-  ) !important;
+  background: linear-gradient(0deg, #8c8c8c 0%, rgba(234, 236, 240, 0) 100%);
   margin: 20px 0;
 `;
 
 const StyledBox = styled(Box)`
-  background: #F0F5FA;
+  background: #f0f5fa;
 `;
