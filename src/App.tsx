@@ -14,6 +14,7 @@ import Referrals from './pages/referrals';
 import Bonuses from './pages/bonuses';
 import Invoices from './pages/invoices';
 import Marketplace from './pages/marketplace'
+import Checkout from './pages/marketplace/Checkout'
 import Layout from './common/Layout';
 import paths from 'utils/paths';
 import SignIn from './pages/auth/SignIn';
@@ -58,11 +59,12 @@ function App() {
             <Route path={paths.history} element={<History />} />
             <Route path={paths.referrals} element={<Referrals />} />
             <Route path={paths.bonuses} element={<Bonuses />} />
-            <Route path={paths.marketplace} element={<Marketplace />} />
             <Route path={paths.invoices} element={<InvoicesBase />}>
               <Route index element={<Invoices />} />
               <Route path=":invoiceId" element={<InvoiceDetails />} />
             </Route>
+            <Route path={paths.marketplace} element={<Marketplace />} />
+            <Route path={paths.checkout} element={<Checkout />} />
           </Route>
         </Routes>
       </ColorModeProvider>

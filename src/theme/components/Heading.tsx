@@ -75,6 +75,7 @@ export const HeadingStyle = {
       color: props.theme.colors.primary.light,
       lineHeight: '30px',
     }),
+    
     defaultProps: {
       size: 'md',
       variant: 'primary',
