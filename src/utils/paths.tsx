@@ -22,6 +22,7 @@ const paths = {
   bonuses: '/bonuses',
   invoices: '/invoices',
   marketplace: '/marketplace',
+  orderDetails: '/order-details',
   checkout: '/checkout',
   notifications: '/notifications',
   settings: '/settings',
