@@ -14,6 +14,7 @@ import {
   Td,
   TableContainer,
   TableCaption,
+  Flex,
 } from '@chakra-ui/react';
 import { getStatusTag } from '../helpers';
 import styled from 'styled-components';
@@ -28,7 +29,7 @@ const Invoice = () => {
         </GridItem>
         <GridItem colSpan={3}>
           <Grid templateColumns="repeat(3, 1fr)">
-            <GridItem justifySelf="end">
+            <GridItem colSpan={1} justifySelf="end">
               <Box mb={4}>
                 <StyledHeading>Issued</StyledHeading>
                 <StyledHeading>01 Apr, 2023</StyledHeading>
@@ -38,7 +39,7 @@ const Invoice = () => {
                 <StyledHeading>15 Apr, 2023</StyledHeading>
               </Box>
             </GridItem>
-            <GridItem justifySelf="end">
+            <GridItem colSpan={1} justifySelf="end">
               <Box mb={4}>
                 <StyledHeading>Billed to</StyledHeading>
                 <StyledHeading>Company Name</StyledHeading>
@@ -49,7 +50,7 @@ const Invoice = () => {
                 <Text variant="tableCaption">+0 (000) 123-4567</Text>
               </Box>
             </GridItem>
-            <GridItem justifySelf="end">
+            <GridItem colSpan={1} justifySelf="end">
               <Box mb={4}>
                 <StyledHeading>From</StyledHeading>
                 <StyledHeading>Alvish Baldha</StyledHeading>
@@ -60,7 +61,7 @@ const Invoice = () => {
                 <Text variant="tableCaption">TAX ID 00XXXXX1234X0XX</Text>
               </Box>
             </GridItem>
-            <GridItem colSpan={3} >
+            <GridItem colSpan={3} width="79%" justifySelf="end" mt={12}>
               <TableContainer>
                 <Table variant="unstyled">
                   <Thead>
