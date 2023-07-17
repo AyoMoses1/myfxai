@@ -59,7 +59,7 @@ export const HeadingStyle = {
     cardHeader: (props: StyleFunctionProps) => ({
       fontWeight: '700',
       fontSize: '18px',
-      color: props.theme.colors.primary,
+      color: props.theme.colors.primary['light'],
     }),
     tableHeading: (props: StyleFunctionProps) => ({
       fontWeight: '700',

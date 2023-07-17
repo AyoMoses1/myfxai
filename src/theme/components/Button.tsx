@@ -55,7 +55,10 @@ export const ButtonStyle = {
     }),
     noBg: (props: StyleFunctionProps) => ({
       ':hover': {
-        boxShadow: 'md',
+        bg: props.theme.colors.blue1,
+        color: '#fff',
+        fontWeight: '600',
+        borderRadius: '5px',
       },
     }),
     outline: (props: StyleFunctionProps) => {
