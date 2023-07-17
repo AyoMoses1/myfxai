@@ -10,6 +10,7 @@ import {
   Heading,
 } from '@chakra-ui/react';
 import { FaTimes } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 import { cartItems } from '../data';
 
 const CartBox = () => {
@@ -35,18 +36,20 @@ const CartBox = () => {
                 <Text variant="cardText">{item.name}</Text>
                 <Heading variant="cardHeader">{`$${item.value}`}</Heading>
               </VStack>
-              <FaTimes color='red' />
+              <FaTimes color="red" />
             </HStack>
           </GridItem>
         ))}
       </Grid>
-      <Button
-        variant="primary"
-        width="90%"
-        sx={{ position: 'absolute', bottom: 5 }}
-      >
-        Checkout
-      </Button>
+      <Link to="/checkout">
+        <Button
+          variant="primary"
+          width="90%"
+          sx={{ position: 'absolute', bottom: 5 }}
+        >
+          Checkout
+        </Button>
+      </Link>
     </Box>
   );
 };

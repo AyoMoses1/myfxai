@@ -7,7 +7,9 @@ import {
   HStack,
   Divider,
 } from '@chakra-ui/react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import paths from 'utils/paths';
 
 const CheckoutBox = () => {
   return (
@@ -40,9 +42,11 @@ const CheckoutBox = () => {
         <StyledDivider />
       </Grid>
       <Box sx={{ position: 'absolute', bottom: 5 }}>
-        <Button variant="primary" width="95%">
-          Proceed to Payment
-        </Button>
+        <Link to={paths.orderDetails}>
+          <Button variant="primary" width="95%">
+            Proceed to Payment
+          </Button>
+        </Link>
         <Button width="95%">Continue Shopping</Button>
       </Box>
     </StyledBox>
