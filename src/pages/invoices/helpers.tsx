@@ -14,7 +14,7 @@ const statusTypes = [
   { name: 'unpaid', color: 'errorRed', bgColor: 'errorRedFade' },
 ];
 
-const getStatusTag = (name: string) => {
+export const getStatusTag = (name: string) => {
   let tag;
   statusTypes.forEach((status) => {
     if (status.name === name) {

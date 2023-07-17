@@ -20,6 +20,8 @@ import SignUp from 'pages/auth/SignUp';
 import { ColorModeProvider } from '@chakra-ui/react';
 import AuthLayout from 'common/AuthLayout';
 import AuthorizedLayout from 'common/AuthorizedLayout';
+import InvoiceDetails from 'pages/invoices/InvoiceDetails';
+import InvoicesBase from 'pages/invoices/Base'
 
 function App() {
   return (
@@ -55,7 +57,10 @@ function App() {
             <Route path={paths.history} element={<History />} />
             <Route path={paths.referrals} element={<Referrals />} />
             <Route path={paths.bonuses} element={<Bonuses />} />
-            <Route path={paths.invoices} element={<Invoices />} />
+            <Route path={paths.invoices} element={<InvoicesBase />}>
+              <Route index element={<Invoices />} />
+              <Route path=":invoiceId" element={<InvoiceDetails />} />
+            </Route>
           </Route>
         </Routes>
       </ColorModeProvider>

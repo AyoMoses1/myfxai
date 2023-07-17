@@ -12,7 +12,6 @@ export const data = [
     billingDate: '6/2/23',
     status: 'unpaid',
     amount: 500,
-
   },
   {
     accountId: 1234567890123,
@@ -72,3 +71,44 @@ export const data = [
   },
 ];
 
+export const tableHeaders = [
+  {
+    name: 'Service',
+  },
+  {
+    name: 'Qty',
+  },
+  {
+    name: 'Rate',
+  },
+  {
+    name: 'Line total',
+  },
+];
+
+export const tableData = [
+  {
+    service: 'Test Service',
+    quantity: 2,
+    rate: '$100',
+    lineTotal: '$200',
+  },
+  {
+    service: 'Test Service',
+    quantity: 2,
+    rate: '$100',
+    lineTotal: '$200',
+  },
+  {
+    service: 'Test Service',
+    quantity: 2,
+    rate: '$100',
+    lineTotal: '$200',
+  },
+  {
+    service: 'Test Service',
+    quantity: 2,
+    rate: '$100',
+    lineTotal: '$200',
+  },
+];
