@@ -6,10 +6,13 @@ import {
   Select,
   FormHelperText,
   Container,
+  InputRightElement,
+  InputGroup,
+  InputLeftElement,
 } from '@chakra-ui/react';
-import { InputObj } from 'types';
 import DateRangePicker from './DateRange';
 import styled from 'styled-components';
+import { PhoneIcon } from '@chakra-ui/icons';
 
 const generateInputs = (inputObj: InputObj) => {
   if (
@@ -24,18 +27,21 @@ const generateInputs = (inputObj: InputObj) => {
         <FormLabel htmlFor={inputObj.name} mb={0} variant="dashboardFormLabel">
           {inputObj.label}
         </FormLabel>
-        <Input
-          id={inputObj.name}
-          type={inputObj.type}
-          {...inputObj.register}
-          size={inputObj.size ?? 'md'}
-          placeholder={inputObj?.placeholder}
-          onChange={inputObj?.onChange}
-          defaultValue={inputObj?.defaultValue}
-          disabled={inputObj?.disabled}
-          key={inputObj.type}
-          variant="fadeBorder"
-        />
+        <InputGroup width={inputObj.width ?? inputObj.width}>
+          <Input
+            id={inputObj.name}
+            type={inputObj.type}
+            {...inputObj.register}
+            size={inputObj.size ?? 'md'}
+            placeholder={inputObj?.placeholder}
+            onChange={inputObj?.onChange}
+            defaultValue={inputObj?.defaultValue}
+            disabled={inputObj?.disabled}
+            key={inputObj.type}
+            variant={inputObj.variant}
+          />
+          <InputRightElement>{inputObj.icon}</InputRightElement>
+        </InputGroup>
         {inputObj.error && (
           <FormErrorMessage>{inputObj.error.message}</FormErrorMessage>
         )}

@@ -36,11 +36,10 @@ export const InputStyle = {
         borderWidth: '1.49px',
         borderImageSlice: 1,
         borderImageWidth: '1px',
-        borderImageRadius:'12px',
+        borderImageRadius: '12px',
         borderImageOutset: 0,
         borderImageRepeat: 'stretch',
-        borderImageSource:
-          'linear-gradient(to right, grey 28.27%, white 100%)',
+        borderImageSource: 'linear-gradient(to right, grey 28.27%, white 100%)',
         borderRadius: '12px',
         borderColor: 'transparent',
         _focus: {
@@ -48,6 +47,14 @@ export const InputStyle = {
           // borderColor: 'transparent',
         },
       },
+    }),
+    tableInput: (props: StyleFunctionProps) => ({
+      field: {
+        borderRadius: '4px',
+        background: '#FBFBFB',
+        borderColor: '#B0BABF',
+      },
+      _placeholder: { color: 'red' },
     }),
   },
   defaultProps: {

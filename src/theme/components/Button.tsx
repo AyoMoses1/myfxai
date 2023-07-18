@@ -21,7 +21,7 @@ export const ButtonStyle = {
         boxShadow: 'md',
       },
       ':focus': {
-        bg: props.theme.colors.primary.light,
+        bg: props.theme.colors.blue1,
         boxShadow: 'md',
       },
       ':disabled': {
@@ -55,7 +55,10 @@ export const ButtonStyle = {
     }),
     noBg: (props: StyleFunctionProps) => ({
       ':hover': {
-        boxShadow: 'md',
+        bg: props.theme.colors.blue1,
+        color: '#fff',
+        fontWeight: '600',
+        borderRadius: '5px',
       },
     }),
     outline: (props: StyleFunctionProps) => {
@@ -81,6 +84,13 @@ export const ButtonStyle = {
         },
       };
     },
+    disabled: (props: StyleFunctionProps) => ({
+      bg: '#E7EAEE',
+      color: props.theme.colors.muted,
+      ':hover': {
+        bg: '#E7EAEE',
+      },
+    }),
     half: (props: StyleFunctionProps) => ({
       bg: props.theme.colors.primary,
       color: '#fff',

@@ -20,7 +20,6 @@ import { Link as ReactRouterLink } from 'react-router-dom';
 import styled from 'styled-components';
 import google from 'assets/icons/google.png';
 import generateInputs from './DynamicForm';
-import { InputObj } from 'types';
 
 function FormContainer({
   inputObj,

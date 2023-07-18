@@ -66,6 +66,16 @@ export const TextStyle = {
           : props.theme.colors.gray1,
       fontSize: '15px',
     }),
+    cartBold: (props: StyleFunctionProps) => ({
+      color:
+        props.colorMode === 'dark'
+          ? props.theme.colors.primary['dark']
+          : props.theme.colors.gray1,
+          fontFamily: 'Puritan',
+          fontSize: '16px',
+          fontWeight: 700,
+          lineHeight: '24px', /* 150% */
+          letterSpacing: '0.48px'    }),
     reviewText: (props: StyleFunctionProps) => ({
       fontWeight: '200',
       fontSize: 24,
@@ -85,6 +95,16 @@ export const TextStyle = {
         props.colorMode === 'dark'
           ? props.theme.colors.textWhite
           : props.theme.colors.gray1,
+    }),
+    tableCaption: (props: StyleFunctionProps) => ({
+      fontWeight: '400',
+      fontSize: 14,
+      lineHeight: 6,
+      letterSpacing: '-0.084px',
+      color:
+        props.colorMode === 'dark'
+          ? props.theme.colors.textWhite
+          : '#363636',
     }),
     headerCaption: (props: StyleFunctionProps) => ({
       fontWeight: '500',

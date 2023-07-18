@@ -19,7 +19,9 @@ function NavBar() {
           <Link mx={4} as={ReactRouterLink} to="/contact">
             Contact
           </Link>
-          <Link mx={4} as={ReactRouterLink} to="/faq">FAQ</Link>
+          <Link mx={4} as={ReactRouterLink} to="/faq">
+            FAQ
+          </Link>
           <Link mx={4} as={ReactRouterLink} to="/terms">
             Terms
           </Link>
@@ -27,13 +29,15 @@ function NavBar() {
             Privacy
           </Link>
         </Box>
-        <Box >
+        <Box>
           <Link mx={4} as={ReactRouterLink} to="/login">
             <Button variant="outline">Log In</Button>
           </Link>
-          <Button variant="secondary" mx={4}>
-            Get Started
-          </Button>
+          <Link mx={4} as={ReactRouterLink} to="/dashboard">
+            <Button variant="secondary" mx={4}>
+              Get Started
+            </Button>
+          </Link>
         </Box>
       </Flex>
     </Box>

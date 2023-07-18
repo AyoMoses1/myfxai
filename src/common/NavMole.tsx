@@ -15,8 +15,8 @@ const NavMole = ({
   borderBottom: boolean
 }) => {
   return (
-    <Box mb={6}>
-      <HStack color={isLogout ? 'red' : 'none'} p={4}>
+    <Box>
+      <HStack color={isLogout ? 'red' : 'none'} px={4} py={4}>
         {icon}
         <Text fontSize="sm" variant="nav">
           {name}

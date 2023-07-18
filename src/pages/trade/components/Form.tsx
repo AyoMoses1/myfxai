@@ -1,7 +1,6 @@
 import { Button } from '@chakra-ui/react';
 import FormContainer from 'common/FormContainer';
 import React, { useMemo } from 'react';
-import { InputObj } from 'types';
 
 const Form = () => {
   const tableInput: InputObj[] = useMemo(

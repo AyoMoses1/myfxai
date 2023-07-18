@@ -1,9 +1,8 @@
-import { VscFileMedia } from 'react-icons/vsc';
-import { FaWarehouse } from 'react-icons/fa';
-import { FiUsers } from 'react-icons/fi';
-import { GrUserWorker } from 'react-icons/gr';
-import { BiWallet } from 'react-icons/bi';
-import { CgProfile } from 'react-icons/cg';
+import { FaBuromobelexperte } from 'react-icons/fa';
+import { FiSettings } from 'react-icons/fi';
+import { GrNotification } from 'react-icons/gr';
+import { AiOutlineClockCircle, AiOutlineFileText } from 'react-icons/ai';
+import { RiMoneyDollarCircleLine, RiUserSearchLine } from 'react-icons/ri';
 
 const paths = {
   home: '/',
@@ -22,6 +21,8 @@ const paths = {
   bonuses: '/bonuses',
   invoices: '/invoices',
   marketplace: '/marketplace',
+  orderDetails: '/order-details',
+  checkout: '/checkout',
   notifications: '/notifications',
   settings: '/settings',
 };
@@ -57,55 +58,61 @@ export const pathObject = [
   {
     name: NavNames.dashboard,
     path: paths.dashboard,
-    icon: <FaWarehouse />,
+    icon: <FaBuromobelexperte />,
     borderBottom: false,
   },
   {
     name: NavNames.trade,
     path: paths.trade,
-    icon: <FaWarehouse />,
+    icon: <FaBuromobelexperte />,
+    borderBottom: false,
+  },
+  {
+    name: NavNames.history,
+    path: paths.history,
+    icon: <AiOutlineClockCircle />,
     borderBottom: false,
   },
   {
     name: NavNames.referrals,
     path: paths.referrals,
-    icon: <FaWarehouse />,
+    icon: <RiUserSearchLine/>,
     borderBottom: false,
   },
-  {
-    name: NavNames.payments,
-    path: paths.payments,
-    icon: <FaWarehouse />,
-    borderBottom: false,
-  },
+  // {
+  //   name: NavNames.payments,
+  //   path: paths.payments,
+  //   icon: <FaWarehouse />,
+  //   borderBottom: false,
+  // },
   {
     name: NavNames.bonuses,
     path: paths.bonuses,
-    icon: <FaWarehouse />,
+    icon: <RiMoneyDollarCircleLine />,
     borderBottom: false,
   },
   {
     name: NavNames.invoices,
     path: paths.invoices,
-    icon: <FaWarehouse />,
+    icon: <AiOutlineFileText/>,
     borderBottom: true,
   },
   {
     name: NavNames.marketplace,
     path: paths.marketplace,
-    icon: <FaWarehouse />,
+    icon: <FaBuromobelexperte />,
     borderBottom: true,
   },
   {
     name: NavNames.notifications,
     path: paths.notifications,
-    icon: <FaWarehouse />,
+    icon: <GrNotification />,
     borderBottom: false,
   },
   {
     name: NavNames.settings,
     path: paths.settings,
-    icon: <FaWarehouse />,
+    icon: <FiSettings />,
     borderBottom: true,
   },
 ];

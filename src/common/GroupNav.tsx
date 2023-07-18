@@ -10,31 +10,30 @@ import Clickable from './Clickable';
 import NavMole from './NavMole';
 import { NavLink } from 'react-router-dom';
 import { VscTriangleDown, VscTriangleRight } from 'react-icons/vsc';
-import { SubNav } from 'types';
 
 type Props = {
-  sub: SubNav[] ;
+  sub: SubNav[];
   main: { name: string };
 };
 
 const GroupNav = (props: Props) => {
   const { isOpen, onToggle } = useDisclosure();
-  const navs = props.sub.map((item) => <SingleNav {...item} key={item.path}/>);
+  const navs = props.sub.map((item) => <SingleNav {...item} key={item.path} />);
 
   return (
     <Box mb={3}>
-      <Clickable height='auto' onClick={onToggle}>
+      <Clickable height="auto" onClick={onToggle}>
         <HStack mb={2} ml={6}>
-          <Text variant='smallBoldNormal' fontSize='sm'>
+          <Text variant="smallBoldNormal" fontSize="sm">
             {props.main.name}
           </Text>
           {isOpen ? <VscTriangleDown /> : <VscTriangleRight />}
         </HStack>
       </Clickable>
       <HStack ml={2}>
-      <Collapse in={isOpen} animateOpacity>
+        <Collapse in={isOpen} animateOpacity>
           {navs}
-      </Collapse>
+        </Collapse>
       </HStack>
     </Box>
   );
@@ -44,7 +43,7 @@ export const SingleNav = ({
   path,
   name,
   icon,
-  borderBottom
+  borderBottom,
 }: {
   path: string;
   name: string;
@@ -53,7 +52,7 @@ export const SingleNav = ({
 }) => {
   return (
     <Link as={NavLink} to={path}>
-      <NavMole name={name} icon={icon} borderBottom={borderBottom}/>
+      <NavMole name={name} icon={icon} borderBottom={borderBottom} />
     </Link>
   );
 };
