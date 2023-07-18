@@ -75,7 +75,17 @@ export const HeadingStyle = {
       color: props.theme.colors.primary.light,
       lineHeight: '30px',
     }),
-    
+    settingsHeading: (props: StyleFunctionProps) => ({
+      fontWeight: '600',
+      fontSize: '14px',
+      color:
+        props.colorMode === 'light'
+          ? props.theme.colors.textDark
+          : props.theme.colors.textWhite,
+      lineHeight: '24px',
+      letterSpacing: '-0.084px',
+    }),
+
     defaultProps: {
       size: 'md',
       variant: 'primary',

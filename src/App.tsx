@@ -17,6 +17,7 @@ import Marketplace from './pages/marketplace'
 import Checkout from './pages/marketplace/Checkout'
 import OrderDetails from 'pages/marketplace/OrderDetails';
 import Notifications from './pages/notifications'
+import Settings from './pages/settings'
 import Layout from './common/Layout';
 import paths from 'utils/paths';
 import SignIn from './pages/auth/SignIn';
@@ -69,6 +70,7 @@ function App() {
             <Route path={paths.checkout} element={<Checkout />} />
             <Route path={paths.orderDetails} element={<OrderDetails />} />
             <Route path={paths.notifications} element={<Notifications />} />
+            <Route path={paths.settings} element={<Settings />} />
           </Route>
         </Routes>
       </ColorModeProvider>
