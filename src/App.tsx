@@ -16,6 +16,7 @@ import Invoices from './pages/invoices';
 import Marketplace from './pages/marketplace'
 import Checkout from './pages/marketplace/Checkout'
 import OrderDetails from 'pages/marketplace/OrderDetails';
+import Notifications from './pages/notifications'
 import Layout from './common/Layout';
 import paths from 'utils/paths';
 import SignIn from './pages/auth/SignIn';
@@ -67,6 +68,7 @@ function App() {
             <Route path={paths.marketplace} element={<Marketplace />} />
             <Route path={paths.checkout} element={<Checkout />} />
             <Route path={paths.orderDetails} element={<OrderDetails />} />
+            <Route path={paths.notifications} element={<Notifications />} />
           </Route>
         </Routes>
       </ColorModeProvider>

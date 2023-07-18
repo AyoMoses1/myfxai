@@ -21,7 +21,7 @@ export const ButtonStyle = {
         boxShadow: 'md',
       },
       ':focus': {
-        bg: props.theme.colors.primary.light,
+        bg: props.theme.colors.blue1,
         boxShadow: 'md',
       },
       ':disabled': {
