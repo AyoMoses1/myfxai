@@ -47,7 +47,11 @@ const Verification = () => {
                 <GridItem mb={8}>
                   <FormControl>
                     <Flex alignItems="center">
-                      <Input placeholder={item.placeholder} width="300px" mr={4}/>
+                      <Input
+                        placeholder={item.placeholder}
+                        width="300px"
+                        mr={4}
+                      />
                       {idx === 1 && <DeleteIcon />}
                     </Flex>
                   </FormControl>
@@ -56,29 +60,50 @@ const Verification = () => {
             ))}
             <GridItem colSpan={2}>
               <Flex justifyContent="end">
-                <Button variant="disabled" onClick={onOpen}>Submit</Button>
+                <Button variant="disabled" onClick={onOpen}>
+                  Submit
+                </Button>
               </Flex>
             </GridItem>
           </Grid>
         </form>
       </Box>
       <ModalComponent
-        title="Payment Notification"
+        title="OTP Verification"
         isOpen={modalOpen}
         onClose={handleClose}
         size="xl"
         overlay
         button={
-          <Button size="sm" variant="primary">
-            Mark as read
-          </Button>
+          <>
+            <Button size="sm" variant="outline" mr={4}>
+              Resend Code
+            </Button>
+            <Button size="sm" variant="primary">
+              Reset Password
+            </Button>
+          </>
         }
       >
         <Box>
           <Text variant="footerText">
-            Payment of $53.21 has been made concerning the renewal of your
-            account
+            A one-time-password has been sent to your mail, enter the code to
+            reset your password
           </Text>
+          <Grid templateColumns="repeat(4, 1fr)" mt={5} alignItems="center">
+            <GridItem colSpan={1}>
+              <FormControl>
+                <FormLabel variant="dashboardFormLabel">OTP Code</FormLabel>
+              </FormControl>
+            </GridItem>
+            <GridItem colSpan={3}>
+              <FormControl>
+                <Flex alignItems="center">
+                  <Input placeholder="123455" mr={4} />
+                </Flex>
+              </FormControl>
+            </GridItem>
+          </Grid>
         </Box>
       </ModalComponent>
     </Box>
