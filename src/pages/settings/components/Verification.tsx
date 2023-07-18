@@ -12,8 +12,8 @@ import {
   Flex,
 } from '@chakra-ui/react';
 import { verifyFormData } from '../data';
-import { DeleteIcon } from '@chakra-ui/icons';
 import ModalComponent from './Modal';
+import { FaRegTrashAlt } from 'react-icons/fa';
 
 const Verification = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -52,7 +52,7 @@ const Verification = () => {
                         width="300px"
                         mr={4}
                       />
-                      {idx === 1 && <DeleteIcon />}
+                      {idx === 1 && <FaRegTrashAlt />}
                     </Flex>
                   </FormControl>
                 </GridItem>
